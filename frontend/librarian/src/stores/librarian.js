@@ -615,6 +615,24 @@ export const useLibrarianStore = defineStore('librarian', () => {
     if (r.ok) { await loadTransactions(); await loadFines() }
     return r
   }
+  async function approveReturnMany(ids = [], payload = {}) {
+    const uniqueIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+    const results = []
+
+    for (const id of uniqueIds) {
+      const r = await apiFetch(`${CIRC_API}/transactions/${id}/return/approve`, {
+        method: 'POST',
+        body: JSON.stringify(payload)
+      })
+      results.push({ id, ok: r.ok, response: r })
+    }
+
+    if (results.some(item => item.ok)) {
+      await Promise.all([loadTransactions(), loadFines(), loadRevenueSummary()])
+    }
+
+    return results
+  }
   async function renew(id, payload = {}) {
     const r = await apiFetch(`${CIRC_API}/transactions/${id}/renew`, {
       method: 'POST',
@@ -622,6 +640,24 @@ export const useLibrarianStore = defineStore('librarian', () => {
     })
     if (r.ok) await loadTransactions()
     return r
+  }
+  async function renewMany(ids = [], payload = {}) {
+    const uniqueIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+    const results = []
+
+    for (const id of uniqueIds) {
+      const r = await apiFetch(`${CIRC_API}/transactions/${id}/renew`, {
+        method: 'POST',
+        body: JSON.stringify(payload)
+      })
+      results.push({ id, ok: r.ok, response: r })
+    }
+
+    if (results.some(item => item.ok)) {
+      await loadTransactions()
+    }
+
+    return results
   }
   async function rejectRenew(id, reason = '') {
     const r = await apiFetch(`${CIRC_API}/transactions/${id}/renew/reject`, {
@@ -640,6 +676,21 @@ export const useLibrarianStore = defineStore('librarian', () => {
     return r
   }
   async function payFine(id) { const r = await apiFetch(`${CIRC_API}/fines/${id}/pay`, { method: 'POST' }); if (r.ok) await loadFines(); return r }
+  async function payFineMany(ids = []) {
+    const uniqueIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+    const results = []
+
+    for (const id of uniqueIds) {
+      const r = await apiFetch(`${CIRC_API}/fines/${id}/pay`, { method: 'POST' })
+      results.push({ id, ok: r.ok, response: r })
+    }
+
+    if (results.some(item => item.ok)) {
+      await Promise.all([loadFines(), loadRevenueSummary()])
+    }
+
+    return results
+  }
   async function loadAll() { await Promise.all([loadBooks(), loadTransactions(), loadFines(), loadRevenueSummary(), loadPriceSettings(), loadDashboardStats(), loadIdentityStats()]) }
 
   function bookTitleOf(record = {}) {
@@ -675,6 +726,6 @@ export const useLibrarianStore = defineStore('librarian', () => {
     pendingTx, borrowedTx, activeTx, overdueTx, returnPendingTx, returnedTx,
     unpaidFines, paidFines, totalUnpaid, totalRevenue, totalBorrowRevenue, totalFineRevenue, pendingFineAmount, unpaidFineAmount, borrowRevenueCount, fineRevenueCount, recentRevenue,
     statusOf, isPending, isBorrowed, isOverdue, isReturned, isReturnPending, isActiveLoan, cardNumberOf, readerNameOf, matchesReaderQuery, bookIdOf, bookTitleOf,
-    loadBooks, loadTransactions, loadFines, loadDashboardStats, loadIdentityStats, loadRevenueSummary, loadPriceSettings, savePriceSettings, loadAll, approve, approveMany, reject, requestReturn, approveReturn, renew, rejectRenew, rejectReturn, payFine
+    loadBooks, loadTransactions, loadFines, loadDashboardStats, loadIdentityStats, loadRevenueSummary, loadPriceSettings, savePriceSettings, loadAll, approve, approveMany, reject, requestReturn, approveReturn, approveReturnMany, renew, renewMany, rejectRenew, rejectReturn, payFine, payFineMany
   }
 })

@@ -56,6 +56,36 @@
           >
             Duyệt tất cả chờ duyệt
           </a-button>
+          <a-button
+            :disabled="!bulkRenewIds.length"
+            :loading="approvingAll"
+            @click="renewSelected"
+          >
+            <ReloadOutlined /> Duyệt gia hạn {{ bulkRenewIds.length || '' }}
+          </a-button>
+          <a-button
+            :disabled="!renewFilteredTx.length"
+            :loading="approvingAll"
+            @click="renewAllPending"
+          >
+            Duyệt tất cả gia hạn
+          </a-button>
+          <a-button
+            :disabled="!bulkReturnIds.length"
+            :loading="approvingAll"
+            @click="returnSelectedAsGood"
+          >
+            <CheckOutlined /> Trả sách tốt {{ bulkReturnIds.length || '' }}
+          </a-button>
+          <a-button
+            danger
+            ghost
+            :disabled="!returnFilteredTx.length"
+            :loading="approvingAll"
+            @click="returnAllAsGood"
+          >
+            Trả tất cả là sách tốt
+          </a-button>
         </a-space>
 
         <a-tag color="blue">{{ filteredTx.length }} phiếu</a-tag>
@@ -243,11 +273,27 @@ const filteredTx = computed(() => {
 })
 
 const pendingFilteredTx = computed(() => filteredTx.value.filter(record => store.isPending(record)))
+const renewFilteredTx = computed(() => filteredTx.value.filter(record => isRenewPending(record)))
+const returnFilteredTx = computed(() => filteredTx.value.filter(record => store.isReturnPending(record)))
 
 const bulkApproveIds = computed(() => selectedRowKeys.value.filter(id => {
   const record = filteredTx.value.find(item => String(item.Id || item.id) === String(id))
   return record && store.isPending(record)
 }))
+
+const bulkRenewIds = computed(() => selectedRowKeys.value.filter(id => {
+  const record = filteredTx.value.find(item => String(item.Id || item.id) === String(id))
+  return record && isRenewPending(record)
+}))
+
+const bulkReturnIds = computed(() => selectedRowKeys.value.filter(id => {
+  const record = filteredTx.value.find(item => String(item.Id || item.id) === String(id))
+  return record && store.isReturnPending(record)
+}))
+
+function isBulkSelectable(record) {
+  return store.isPending(record) || isRenewPending(record) || store.isReturnPending(record)
+}
 
 const rowSelection = computed(() => {
   if (readOnlyEmbed.value) return null
@@ -259,7 +305,7 @@ const rowSelection = computed(() => {
       selectedRowKeys.value = keys
     },
     getCheckboxProps: record => ({
-      disabled: !store.isPending(record),
+      disabled: !isBulkSelectable(record),
       title: store.isPending(record) ? 'Chọn để duyệt hàng loạt' : 'Chỉ chọn được phiếu chờ duyệt'
     })
   }
@@ -297,6 +343,80 @@ async function approveSelected() {
 
 async function approveAllPending() {
   await approveIds(pendingFilteredTx.value.map(record => record.Id || record.id))
+}
+
+async function renewIds(ids = []) {
+  const targetIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+  if (!targetIds.length) {
+    message.warning('Chưa có phiếu chờ gia hạn nào được chọn.')
+    return
+  }
+
+  approvingAll.value = true
+  try {
+    const results = await store.renewMany(targetIds, {
+      extraDays: 7,
+      reason: 'Gia hạn hàng loạt theo đề nghị độc giả'
+    })
+    const successCount = results.filter(item => item.ok).length
+    const failedCount = results.length - successCount
+    selectedRowKeys.value = []
+
+    if (successCount && !failedCount) {
+      message.success(`Đã duyệt gia hạn ${successCount} phiếu.`)
+    } else if (successCount) {
+      message.warning(`Đã duyệt gia hạn ${successCount} phiếu, ${failedCount} phiếu bị lỗi.`)
+    } else {
+      message.error('Không duyệt được phiếu gia hạn nào.')
+    }
+  } finally {
+    approvingAll.value = false
+  }
+}
+
+async function renewSelected() {
+  await renewIds(bulkRenewIds.value)
+}
+
+async function renewAllPending() {
+  await renewIds(renewFilteredTx.value.map(record => record.Id || record.id))
+}
+
+async function returnIdsAsGood(ids = []) {
+  const targetIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+  if (!targetIds.length) {
+    message.warning('Chưa có phiếu chờ trả nào được chọn.')
+    return
+  }
+
+  approvingAll.value = true
+  try {
+    const results = await store.approveReturnMany(targetIds, {
+      condition: 'Good',
+      conditionNote: 'Xác nhận hàng loạt: sách tốt, dùng bình thường'
+    })
+    const successCount = results.filter(item => item.ok).length
+    const failedCount = results.length - successCount
+    selectedRowKeys.value = []
+
+    if (successCount && !failedCount) {
+      message.success(`Đã xác nhận trả ${successCount} phiếu là sách tốt.`)
+    } else if (successCount) {
+      message.warning(`Đã xác nhận trả ${successCount} phiếu, ${failedCount} phiếu bị lỗi.`)
+    } else {
+      message.error('Không xác nhận trả được phiếu nào.')
+    }
+  } finally {
+    approvingAll.value = false
+  }
+}
+
+async function returnSelectedAsGood() {
+  await returnIdsAsGood(bulkReturnIds.value)
+}
+
+async function returnAllAsGood() {
+  await returnIdsAsGood(returnFilteredTx.value.map(record => record.Id || record.id))
 }
 
 async function doApprove(r) {

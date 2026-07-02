@@ -42,6 +42,24 @@
           <a-radio-button value="Paid">Đã thanh toán</a-radio-button>
         </a-radio-group>
 
+        <a-space v-if="!readOnlyEmbed" wrap>
+          <a-button
+            type="primary"
+            :disabled="!bulkFineIds.length"
+            :loading="approvingAll"
+            @click="approveSelectedFines"
+          >
+            Duyệt phí phạt {{ bulkFineIds.length || '' }}
+          </a-button>
+          <a-button
+            :disabled="!pendingFilteredFines.length"
+            :loading="approvingAll"
+            @click="approveAllFines"
+          >
+            Duyệt tất cả phí phạt
+          </a-button>
+        </a-space>
+
         <a-tag color="blue">{{ filteredFines.length }} khoản</a-tag>
       </div>
 
@@ -50,6 +68,8 @@
         :data-source="filteredFines"
         :loading="libStore.loading"
         :pagination="{ pageSize: 10 }"
+        :row-selection="rowSelection"
+        bordered
         size="middle"
         row-key="Id"
       >
@@ -162,6 +182,8 @@ const embedMode = libStore.embedMode
 const readOnlyEmbed = computed(() => embedMode && !libStore.hasAuthToken())
 const filter = ref('all')
 const actionId = ref(null)
+const selectedRowKeys = ref([])
+const approvingAll = ref(false)
 const rejectDialog = ref(false)
 const rejecting = ref(false)
 const selectedFine = ref(null)
@@ -202,6 +224,11 @@ const filteredFines = computed(() => {
 })
 
 const pendingFines = computed(() => libStore.fines.filter(item => isPending(item)))
+const pendingFilteredFines = computed(() => filteredFines.value.filter(item => isPending(item)))
+const bulkFineIds = computed(() => selectedRowKeys.value.filter(id => {
+  const item = filteredFines.value.find(record => String(record.Id || record.id) === String(id))
+  return item && isPending(item)
+}))
 const paidFines = computed(() => libStore.fines.filter(item => isPaid(item)))
 const totalUnpaid = computed(() =>
   libStore.fines
@@ -212,6 +239,22 @@ const totalUnpaid = computed(() =>
 function actionKey(item, suffix) {
   return `${item.Id || item.id || 'row'}:${suffix}`
 }
+
+const rowSelection = computed(() => {
+  if (readOnlyEmbed.value) return null
+
+  return {
+    selectedRowKeys: selectedRowKeys.value,
+    preserveSelectedRowKeys: false,
+    onChange: keys => {
+      selectedRowKeys.value = keys
+    },
+    getCheckboxProps: record => ({
+      disabled: !isPending(record),
+      title: isPending(record) ? 'Chọn để duyệt phí phạt hàng loạt' : 'Chỉ chọn được phí phạt chờ duyệt'
+    })
+  }
+})
 
 function displayReader(item = {}) {
   return item.ReaderName || item.readerName || item.FullName || item.fullName || item.ReaderUsername || item.readerUsername || displayCard(item)
@@ -285,6 +328,40 @@ async function approve(item) {
   } finally {
     actionId.value = null
   }
+}
+
+async function approveFineIds(ids = []) {
+  const targetIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+  if (!targetIds.length) {
+    message.warning('Chưa có phí phạt chờ duyệt nào được chọn.')
+    return
+  }
+
+  approvingAll.value = true
+  try {
+    const results = await libStore.payFineMany(targetIds)
+    const successCount = results.filter(item => item.ok).length
+    const failedCount = results.length - successCount
+    selectedRowKeys.value = []
+
+    if (successCount && !failedCount) {
+      message.success(`Đã duyệt ${successCount} khoản phí phạt.`)
+    } else if (successCount) {
+      message.warning(`Đã duyệt ${successCount} khoản, ${failedCount} khoản bị lỗi.`)
+    } else {
+      message.error('Không duyệt được khoản phí phạt nào.')
+    }
+  } finally {
+    approvingAll.value = false
+  }
+}
+
+async function approveSelectedFines() {
+  await approveFineIds(bulkFineIds.value)
+}
+
+async function approveAllFines() {
+  await approveFineIds(pendingFilteredFines.value.map(item => item.Id || item.id))
 }
 
 async function reject(item) {
