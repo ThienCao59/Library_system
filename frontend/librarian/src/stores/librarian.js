@@ -583,6 +583,21 @@ export const useLibrarianStore = defineStore('librarian', () => {
     if (r.ok) await loadTransactions()
     return r
   }
+  async function approveMany(ids = []) {
+    const uniqueIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+    const results = []
+
+    for (const id of uniqueIds) {
+      const r = await apiFetch(`${CIRC_API}/transactions/${id}/approve`, { method: 'POST' })
+      results.push({ id, ok: r.ok, response: r })
+    }
+
+    if (results.some(item => item.ok)) {
+      await Promise.all([loadTransactions(), loadRevenueSummary()])
+    }
+
+    return results
+  }
   async function reject(id, reason = '') {
     const r = await apiFetch(`${CIRC_API}/transactions/${id}/reject`, {
       method: 'POST',
@@ -660,6 +675,6 @@ export const useLibrarianStore = defineStore('librarian', () => {
     pendingTx, borrowedTx, activeTx, overdueTx, returnPendingTx, returnedTx,
     unpaidFines, paidFines, totalUnpaid, totalRevenue, totalBorrowRevenue, totalFineRevenue, pendingFineAmount, unpaidFineAmount, borrowRevenueCount, fineRevenueCount, recentRevenue,
     statusOf, isPending, isBorrowed, isOverdue, isReturned, isReturnPending, isActiveLoan, cardNumberOf, readerNameOf, matchesReaderQuery, bookIdOf, bookTitleOf,
-    loadBooks, loadTransactions, loadFines, loadDashboardStats, loadIdentityStats, loadRevenueSummary, loadPriceSettings, savePriceSettings, loadAll, approve, reject, requestReturn, approveReturn, renew, rejectRenew, rejectReturn, payFine
+    loadBooks, loadTransactions, loadFines, loadDashboardStats, loadIdentityStats, loadRevenueSummary, loadPriceSettings, savePriceSettings, loadAll, approve, approveMany, reject, requestReturn, approveReturn, renew, rejectRenew, rejectReturn, payFine
   }
 })

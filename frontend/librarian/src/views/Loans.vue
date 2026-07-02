@@ -40,6 +40,24 @@
           <a-radio-button value="Returned">Đã trả</a-radio-button>
         </a-radio-group>
 
+        <a-space v-if="!readOnlyEmbed" wrap>
+          <a-button
+            type="primary"
+            :disabled="!bulkApproveIds.length"
+            :loading="approvingAll"
+            @click="approveSelected"
+          >
+            <CheckOutlined /> Duyệt {{ bulkApproveIds.length || 'tất cả' }}
+          </a-button>
+          <a-button
+            :disabled="!pendingFilteredTx.length"
+            :loading="approvingAll"
+            @click="approveAllPending"
+          >
+            Duyệt tất cả chờ duyệt
+          </a-button>
+        </a-space>
+
         <a-tag color="blue">{{ filteredTx.length }} phiếu</a-tag>
       </div>
 
@@ -48,6 +66,8 @@
         :data-source="filteredTx"
         :loading="store.loading"
         :pagination="{ pageSize: 10 }"
+        :row-selection="rowSelection"
+        bordered
         size="middle"
         row-key="Id"
       >
@@ -177,6 +197,8 @@ const embedMode = store.embedMode
 const readOnlyEmbed = computed(() => embedMode && !store.hasAuthToken())
 const filter = ref('all')
 const actionId = ref(null)
+const selectedRowKeys = ref([])
+const approvingAll = ref(false)
 const conditionDialog = ref(false)
 const confirming = ref(false)
 const selectedReturn = ref(null)
@@ -220,9 +242,69 @@ const filteredTx = computed(() => {
   return source.filter(record => store.matchesReaderQuery(record, q, [bookTitleOf(record), store.bookIdOf(record)]))
 })
 
+const pendingFilteredTx = computed(() => filteredTx.value.filter(record => store.isPending(record)))
+
+const bulkApproveIds = computed(() => selectedRowKeys.value.filter(id => {
+  const record = filteredTx.value.find(item => String(item.Id || item.id) === String(id))
+  return record && store.isPending(record)
+}))
+
+const rowSelection = computed(() => {
+  if (readOnlyEmbed.value) return null
+
+  return {
+    selectedRowKeys: selectedRowKeys.value,
+    preserveSelectedRowKeys: false,
+    onChange: keys => {
+      selectedRowKeys.value = keys
+    },
+    getCheckboxProps: record => ({
+      disabled: !store.isPending(record),
+      title: store.isPending(record) ? 'Chọn để duyệt hàng loạt' : 'Chỉ chọn được phiếu chờ duyệt'
+    })
+  }
+})
+
+async function approveIds(ids = []) {
+  const targetIds = [...new Set(ids.map(id => String(id || '').trim()).filter(Boolean))]
+  if (!targetIds.length) {
+    message.warning('Chưa có phiếu chờ duyệt nào được chọn.')
+    return
+  }
+
+  approvingAll.value = true
+  try {
+    const results = await store.approveMany(targetIds)
+    const successCount = results.filter(item => item.ok).length
+    const failedCount = results.length - successCount
+    selectedRowKeys.value = []
+
+    if (successCount && !failedCount) {
+      message.success(`Đã duyệt ${successCount} phiếu mượn.`)
+    } else if (successCount) {
+      message.warning(`Đã duyệt ${successCount} phiếu, ${failedCount} phiếu bị lỗi.`)
+    } else {
+      message.error('Không duyệt được phiếu nào.')
+    }
+  } finally {
+    approvingAll.value = false
+  }
+}
+
+async function approveSelected() {
+  await approveIds(bulkApproveIds.value)
+}
+
+async function approveAllPending() {
+  await approveIds(pendingFilteredTx.value.map(record => record.Id || record.id))
+}
+
 async function doApprove(r) {
   actionId.value = r.Id + 'a'
   const res = await store.approve(r.Id)
+  if (res.ok) {
+    selectedRowKeys.value = selectedRowKeys.value.filter(id => String(id) !== String(r.Id || r.id))
+  }
   if (res.ok) message.success('Đã duyệt mượn sách.')
   else message.error(await readError(res))
   actionId.value = null

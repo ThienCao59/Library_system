@@ -115,6 +115,7 @@
             :data-source="records"
             :loading="loading"
             :pagination="{ pageSize: 8, showSizeChanger: false }"
+            bordered
             size="middle"
             row-key="Id"
             :locale="{ emptyText: 'Chưa có dữ liệu trong khoảng thời gian này' }"
