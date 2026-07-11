@@ -1,0 +1,845 @@
+{
+  "login": {
+    "title": "Login",
+    "username": {
+      "label": "Username / Phone number",
+      "placeholder": "username or 0912 345 678",
+      "required": "Please enter your username!"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "required": "Please enter your password!"
+    },
+    "forgot": "Forgot Password?",
+    "btn": "Login to System",
+    "no": {
+      "account": "Don't have an account? "
+    },
+    "register": {
+      "link": "Register Now"
+    },
+    "back": {
+      "home": "Back to home"
+    },
+    "contact": "Have a problem? Contact us at ",
+    "success": "Login successful! Welcome back.",
+    "error": "Login failed. Invalid username or password!"
+  },
+  "register": {
+    "title": "Hello!",
+    "subtitle": "We are glad to see you :)",
+    "name": "Full Name",
+    "username": "Username",
+    "email": "Email Address",
+    "password": "Password",
+    "confirm": {
+      "password": "Repeat Password"
+    },
+    "phone": "Phone Number (Optional)",
+    "terms": "I agree to the ",
+    "and": " and ",
+    "privacy": "Privacy Policy",
+    "btn": "Sign Up",
+    "have": {
+      "account": "Already have an account? "
+    },
+    "signin": {
+      "link": "Sign In"
+    },
+    "back": {
+      "home": "Back to home"
+    },
+    "success": {
+      "title": "Registration Successful!",
+      "sub": "Your digital library card has been automatically activated!",
+      "btn": "Go to Login",
+      "msg": "Registration successful!"
+    },
+    "or": "Or",
+    "card": {
+      "code": "LIBRARY CARD NO.",
+      "name": "FULL NAME",
+      "expiry": "EXPIRY DATE"
+    },
+    "google": {
+      "btn": "Sign up with Google"
+    },
+    "error": {
+      "default": "Registration error from system!",
+      "connection": "Registration failed. Please check your API connection!"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "guide": "Guide",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register"
+  },
+  "hero": {
+    "title": "Online library",
+    "desc": "Next-generation Smart Digital Library — opening the door to knowledge in the digital era.",
+    "cta": "Get your card online"
+  },
+  "footer": {
+    "copyright": "©2026 — Team 3 · All Rights Reserved"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "books": "Book Management",
+    "loans": "Loan Management",
+    "accounts": "Account Management",
+    "readers": "Readers",
+    "staff": "Librarians",
+    "cards": "Library Cards",
+    "finance": "Finance",
+    "revenue": "Revenue",
+    "penalty": "Penalties",
+    "logs": "System Logs",
+    "settings": "System Settings",
+    "logout": "Logout"
+  },
+  "settings": {
+    "title": "System Settings",
+    "lang": {
+      "label": "System Language",
+      "vi": "Tiếng Việt",
+      "en": "English",
+      "save": "Save language",
+      "saved": "Language changed successfully!"
+    }
+  },
+  "landing": {
+    "features": {
+      "title": "Outstanding Feature System"
+    },
+    "f1": {
+      "num": "01",
+      "title": "Automated Digital Card & RFID",
+      "desc": "The integrated identity service automatically issues personalized QR-code library cards in just 3 seconds. Supports OTP verification, dynamic security QR codes that change continuously to prevent fraud, and syncs with school RFID physical cards.",
+      "link": "View Details →"
+    },
+    "f2": {
+      "title": "Smart Search & Book Recommendations",
+      "desc": "Uses reading-behavior analysis algorithms to deliver accurate personalized book recommendations. Instant full-text search in milliseconds, suggestions based on favorite topics and borrowing history, real-time multi-level catalog management."
+    },
+    "f3": {
+      "title": "Ultra-fast Loans & API Gateway",
+      "desc": "SmartLib.NET is built on a powerful Microservices architecture. Place book loan requests online, auto-sync via RabbitMQ Event Bus, and pick up books at the counter with a super-fast QR code. All routed through a secure API Gateway."
+    },
+    "how": {
+      "label": "Workflow",
+      "title": "Just 4 simple steps",
+      "sub": "Start using SmartLib in minutes."
+    },
+    "step1": {
+      "t": "Register",
+      "d": "Create an account with your email or school account"
+    },
+    "step2": {
+      "t": "Search",
+      "d": "Find books by title, author, or genre"
+    },
+    "step3": {
+      "t": "Borrow",
+      "d": "Select a book and confirm your loan request online"
+    },
+    "step4": {
+      "t": "Track",
+      "d": "Receive notifications and manage your loan schedule"
+    },
+    "news": {
+      "label": "News",
+      "title": "Announcements & Events"
+    },
+    "detail": {
+      "link": "View Details →"
+    },
+    "ft": {
+      "explore": "Explore",
+      "services": "Services",
+      "newsletter": "Newsletter",
+      "nl": {
+        "label": "Subscribe to receive new book notifications and weekly library events.",
+        "placeholder": "Your email...",
+        "btn": "Subscribe"
+      },
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookie": "Cookie"
+    },
+    "stats": {
+      "books": "Books",
+      "members": "Members",
+      "award": "Digital Transformation Award",
+      "digital_docs": "Digital Documents",
+      "rating": "Rating",
+      "borrows": "Borrows",
+      "books_cap": "Books",
+      "members_cap": "Members",
+      "borrows_cap": "Borrows",
+      "digital_docs_cap": "Digital Documents"
+    },
+    "card": {
+      "title": "LIBRARY CARD CODE",
+      "name": "JOHN DOE"
+    },
+    "search_placeholder": "Search",
+    "book1": {
+      "title": "ASP.NET Core MVC Programming",
+      "author": "John Smith (2025)",
+      "status": "Available"
+    },
+    "book2": {
+      "title": "Entity Framework Core 9",
+      "author": "Jane Doe (2026)",
+      "status": "Borrowed"
+    }
+  },
+  "btn": {
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "view": "View",
+    "lock": "Lock",
+    "unlock": "Unlock",
+    "retry": "Retry",
+    "back": "Back",
+    "confirm": "Confirm",
+    "refresh": "Refresh",
+    "export": "Export Excel",
+    "import": "Import Excel"
+  },
+  "profile": {
+    "my": {
+      "account": "Your Account"
+    },
+    "reader": {
+      "detail": "Reader Details"
+    },
+    "title": {
+      "self": "My Profile"
+    },
+    "edit": {
+      "btn": "Edit Profile",
+      "title": "Edit Profile"
+    },
+    "phone": "Phone Number",
+    "username": "Username",
+    "library": {
+      "card": "Library Card"
+    },
+    "card": {
+      "issued": "ISSUED",
+      "expiry": "EXPIRY"
+    },
+    "no": {
+      "card": "No library card issued yet"
+    },
+    "account": {
+      "status": "Account Status"
+    },
+    "active": "Active",
+    "locked": "Locked",
+    "created": {
+      "at": "Account created"
+    },
+    "full": {
+      "name": "Full Name"
+    },
+    "name": {
+      "placeholder": "Enter your full name"
+    },
+    "save": {
+      "changes": "Save Changes",
+      "success": "Profile updated successfully!",
+      "error": "Update failed. Please try again!"
+    },
+    "load": {
+      "error": "Could not load profile. Please try again.",
+      "err2": "An error occurred while loading the profile!"
+    },
+    "not": {
+      "found": "Reader not found!"
+    }
+  },
+  "dash": {
+    "readers": {
+      "title": "Reader Management",
+      "sub": "View, update and manage registered readers in the system",
+      "total": "Readers"
+    },
+    "staff": {
+      "title": "Staff Management",
+      "sub": "View and manage librarian and administrator accounts in the system",
+      "total": "staff",
+      "create": "Create Librarian"
+    },
+    "cards": {
+      "title": "Library Cards",
+      "sub": "View and manage library cards issued to readers",
+      "total": "cards"
+    },
+    "logs": {
+      "title": "System Logs",
+      "sub": "CRUD · Login/Logout · Lock/Unlock · Books · Borrow/Return",
+      "empty": "No log records found.",
+      "filter": "Filter by event type:",
+      "all": "All",
+      "auth": "Login / Logout",
+      "user": "Users (CRUD, lock/unlock)",
+      "book": "Books (add/edit/delete)",
+      "circulation": "Borrow / Return",
+      "total": "records"
+    },
+    "settings": {
+      "title": "System Settings"
+    },
+    "search": {
+      "placeholder": "Search Readers, Cards..."
+    }
+  },
+  "status": {
+    "active": "Active",
+    "locked": "Locked",
+    "all": "All statuses"
+  },
+  "staff": {
+    "modal": {
+      "title": "Create Librarian Account"
+    },
+    "full": {
+      "name": "Full Name"
+    },
+    "phone": "Phone Number",
+    "password": "Password",
+    "demote": "Demote to Reader"
+  },
+  "dashboard": {
+    "menu": {
+      "admin_system": "ADMIN SYSTEM",
+      "librarian_system": "LIBRARIAN DUTIES",
+      "process_borrow": "Process Borrow / Return",
+      "finance": "Finance Management",
+      "revenue": "Revenue",
+      "penalty": "Penalties"
+    },
+    "overview": {
+      "total_readers": "Total Readers",
+      "total_cards": "Total Cards",
+      "total_borrows": "Total Borrows",
+      "total_books": "Total Books",
+      "book_borrows": "Book Borrows",
+      "by_month": "By Month",
+      "card_statistics": "Card Statistics",
+      "details": "Details →",
+      "active_cards_lbl": "Active:",
+      "locked_cards_lbl": "Locked:",
+      "expired_cards_lbl": "Expired:",
+      "book_categories": "Book Categories",
+      "by_category": "By Category",
+      "top_borrowed_books": "Top Borrowed Books",
+      "popularity_ranking": "Popularity Ranking",
+      "system_logs": "System Logs",
+      "logs_desc": "Login · Lock/Unlock · Books · Borrow/Return — recently updated",
+      "refresh": "Refresh",
+      "view_all": "View All →",
+      "no_logs": "No log records found.",
+      "no_categories": "No category data found.",
+      "no_data": "No data"
+    }
+  },
+  "auto": {
+    "txt_543bb199": "You do not have permission to access this admin panel. This site is for Admins or Librarians only!",
+    "txt_d66e5b4e": "Back to Home",
+    "txt_013590fd": "Process Borrow/Return",
+    "txt_4f086c5d": "Penalties",
+    "txt_575a6091": "No results found",
+    "txt_8f69d55b": "READER",
+    "txt_cd99aa1d": "LIBRARY CARD",
+    "txt_2268a682": "⚠️ Warning",
+    "txt_48ac043b": "Click the warning to open the processing page",
+    "txt_1e892958": "No pending warnings",
+    "txt_4f14c3fa": "Open processing page →",
+    "txt_59a9e842": "Selected",
+    "txt_2e6f0d86": "Delete Selected",
+    "txt_3651c4d7": "Deselect",
+    "txt_e293cd50": "Loading reader list from database...",
+    "txt_0e22f7e7": "No readers found",
+    "txt_58ac4f04": "Please try again with different keywords or filters.",
+    "txt_92849db7": "Search",
+    "txt_682697e7": "Restore",
+    "txt_2fc8766c": "Full Name",
+    "txt_c732ee4e": "Contact Email",
+    "txt_6de63f11": "Phone Number",
+    "txt_1e405035": "Cancel",
+    "txt_512898d2": "Save Changes",
+    "txt_6c1dfe9d": "Library Card List",
+    "txt_f5a875da": "View and manage readers' library cards",
+    "txt_d369e261": "Total:",
+    "txt_a6993480": "Status:",
+    "txt_fd1c3a01": "All Statuses",
+    "txt_d2b65230": "Active",
+    "txt_d9344990": "Locked",
+    "txt_35a6b808": "Expired",
+    "txt_934ac7a3": "Loading card list...",
+    "txt_49785065": "No cards found",
+    "txt_d462dda7": "Issue Date:",
+    "txt_e67c30d3": "Lock Card",
+    "txt_f15279aa": "Activate",
+    "txt_15e23a99": "Librarian Management",
+    "txt_8b7f26f2": "Only Admins can create Librarian accounts",
+    "txt_e7d653f5": "Create Librarian",
+    "txt_ec89be8d": "Loading staff list...",
+    "txt_404c8085": "No staff found",
+    "txt_b25937fb": "Initializing secure session...",
+    "txt_c77a00e8": "System Settings",
+    "txt_f894048f": "Manage information, configuration, and library settings",
+    "txt_c600a340": "Library Information",
+    "txt_8858c435": "Update name, address, and contact info",
+    "txt_82609cef": "Library Name",
+    "txt_7db5b909": "Address",
+    "txt_0327b13e": "Short Description",
+    "txt_2473120f": "Library Logo",
+    "txt_acfae9d2": "Upload Image",
+    "txt_7c2e305f": "Save Information",
+    "txt_fd51d996": "Admin Account",
+    "txt_583282b8": "Update personal information and change password",
+    "txt_623825de": "Full Name",
+    "txt_c76ba836": "Avatar",
+    "txt_fcac0c11": "Change Avatar",
+    "txt_ff6fe7b1": "Change Password",
+    "txt_d9487313": "Current Password",
+    "txt_ccef959a": "New Password",
+    "txt_d393faae": "Confirm Password",
+    "txt_03c9183a": "Library Card Settings",
+    "txt_f91ceb28": "Rules for validity and borrow limits",
+    "txt_c23dd68f": "Default Card Validity",
+    "txt_d3c3f22b": "1 year",
+    "txt_c8b30bdd": "2 years",
+    "txt_364c8183": "3 years",
+    "txt_99744649": "5 years",
+    "txt_582846d5": "Max Books Allowed",
+    "txt_59a5d82c": "Max Borrow Days",
+    "txt_999302b3": "Save Settings",
+    "txt_b1dec2e8": "Penalty Settings",
+    "txt_dcd6f911": "Fines for late returns, lost or damaged books",
+    "txt_a4d1f838": "Late Fine (VND/day)",
+    "txt_19e22d13": "Lost Book Fine (VND)",
+    "txt_c40ed254": "Damaged Book Fine (VND)",
+    "txt_8c6f9073": "Notification Settings",
+    "txt_9243437d": "Reminder emails and system notifications",
+    "txt_50368d86": "Book Return Email Reminder",
+    "txt_9eba830e": "Send reminder email before due date",
+    "txt_9057a108": "System Notifications",
+    "txt_2f6315c0": "Show internal warnings on Dashboard",
+    "txt_fd5ba7c4": "Remind before due date (days)",
+    "txt_a764e4b3": "Data Backup",
+    "txt_36f619f7": "Create and restore system backups",
+    "txt_e7a0d600": "Create Manual Backup",
+    "txt_183fb6d3": "Export entire system data to backup file",
+    "txt_cfe3f9bf": "Create Backup",
+    "txt_6b858fe0": "Restore from Backup File",
+    "txt_b083ce20": "Upload .json or .zip to restore data",
+    "txt_782f13ac": "Restoring data will overwrite existing data. Please be sure.",
+    "txt_2196afbb": "Process Borrow/Return Requests",
+    "txt_d8ee31f7": "Ticket ID",
+    "txt_d3bc2c9c": "Reader",
+    "txt_dbce656a": "Card ID",
+    "txt_f01dcd24": "Registered Books",
+    "txt_e1f22674": "Registration Date",
+    "txt_42b670cd": "Status",
+    "txt_9822be11": "Action",
+    "txt_a4db4d12": "Approve",
+    "txt_2119d87d": "Reject",
+    "txt_10fb2c48": "Processed",
+    "txt_772271c9": "Lookup Reader Status",
+    "txt_8929ef31": "Search",
+    "txt_93faf48c": "Active Card",
+    "txt_2d017d38": "Borrowed Books",
+    "txt_8d6a5a83": "Overdue Books",
+    "txt_ece15c59": "Accumulated Fines",
+    "txt_3fa0943c": "Currently Borrowed Books:",
+    "txt_fba104f9": "Due Date:",
+    "txt_f923e7c4": "Confirm Return",
+    "txt_cc0b1c24": "Enter book code",
+    "txt_208f42e3": "Physical Inspection",
+    "txt_d9c855e8": "Complete",
+    "txt_142e98dc": "Enter book code to start return process:",
+    "txt_555f1f22": "Continue",
+    "txt_2266320e": "Confirm returned book condition:",
+    "txt_f958fb22": "Book is intact, not torn",
+    "txt_1c810fc4": "Book is clean, not written on",
+    "txt_890cdb9d": "Book returned on time",
+    "txt_12b318ea": "Confirm Return",
+    "txt_f400e4ad": "Book returned successfully!",
+    "txt_127b35a4": "Book has been automatically added back to Catalog (N1).",
+    "txt_e29866e5": "Return another book",
+    "txt_8c4d542c": "Loading data from Database...",
+    "txt_706b4d81": "No readers in the system.",
+    "txt_bb345e8e": "Full Name",
+    "txt_8cae9afb": "No library cards in the system.",
+    "txt_b721fd50": "Cardholder",
+    "txt_c72178e9": "Issue Date",
+    "txt_a584d378": "Expiry Date",
+    "txt_e78f2e1e": "Borrow/Return transaction list is empty.",
+    "txt_b208cc4c": "Book Title",
+    "txt_e7f5ae9e": "Fine (VND)",
+    "txt_660d6b7b": "Awaiting Catalog Service (N1) Connection",
+    "txt_4704b606": "Detailed book catalog data will sync automatically once N1 team completes API Gateway connection.",
+    "txt_1663500a": "Edit Reader Info",
+    "txt_72a24184": "Enter full name",
+    "txt_9b3c16d5": "Enter email",
+    "txt_0f1d3d42": "Enter phone (optional)",
+    "txt_fe030e24": "Search by card ID, cardholder name...",
+    "txt_b1a6cf3b": "Circulation Service N2 - Borrow/Return Processing",
+    "txt_14a2633f": "Revenue Management - N2 Librarian Payments",
+    "txt_05b21c78": "Fine Management - N2 Librarian Fines",
+    "txt_9a1b7969": "Short library description...",
+    "txt_f200d91f": "Admin Full Name",
+    "txt_22bfd9b8": "Enter current password",
+    "txt_eee7a769": "Re-enter password",
+    "txt_1437f79c": "About Us",
+    "txt_3b318cbe": "Our Story",
+    "txt_0e5b1034": "Built by book lovers, for a limitless learning community.",
+    "txt_25751bcd": "We believe knowledge is everyone's right.",
+    "txt_9045a161": "Discover More",
+    "txt_cc73abff": "Core Values",
+    "txt_5c458e9e": "We",
+    "txt_48411906": "believe in what",
+    "txt_e2df5844": "Why choose us",
+    "txt_2e148974": "how?",
+    "txt_c4be013b": "Features",
+    "txt_2e542d2c": "Everything in",
+    "txt_e1438e83": "one platform",
+    "txt_ab967c92": "Journey",
+    "txt_3061f544": "History",
+    "txt_5c886e25": "development",
+    "txt_e189c453": "Team",
+    "txt_8ddd22da": "People",
+    "txt_f9a9a4af": "builders",
+    "txt_1bc7300d": "Technology",
+    "txt_f9e30f99": "Built with",
+    "txt_be5aa24e": "modern technology",
+    "txt_5607de2d": "Ready to experience?",
+    "txt_c84f1db8": "Sign up and get an online library card today.",
+    "txt_8b6b7866": "🚀 Register Now",
+    "txt_ad3ff017": "Login →",
+    "txt_9013c13c": "Search Books",
+    "txt_6ec698b2": "Borrow Online",
+    "txt_ab124f2b": "Reserve",
+    "txt_bdf85ddb": "Renew Book",
+    "txt_7557a4be": "Digital Documents",
+    "txt_3833739b": "Enter your registered email to receive a password reset code.",
+    "txt_769e52d9": "Send Auth Code",
+    "txt_98809dfd": "An auth code was sent to",
+    "txt_d47944cc": ". Please enter code and new password.",
+    "txt_691e5b59": "Update Password",
+    "txt_c23a8def": "Remembered password?",
+    "txt_32b703d0": "Login Now",
+    "txt_3cc53a09": "Back to Home",
+    "txt_1b001c91": "Auth Code (Token)",
+    "txt_f3786db5": "Paste auth code here",
+    "txt_4129871f": "New Password",
+    "txt_159f5728": "Minimum 6 characters",
+    "txt_46d5b92d": "Re-enter Password",
+    "txt_45a0ffe8": "Events",
+    "txt_80cb24f5": "Book & Reading Culture Week 2025",
+    "txt_2ddd25ec": "New Books",
+    "txt_fa0565c8": "Announcement",
+    "txt_8ab3e5f5": "Free card extension for Summer 2025",
+    "txt_03f0c664": "Home",
+    "txt_33f0741f": "About",
+    "txt_3b5d38f4": "Guide",
+    "txt_9276b119": "Contact",
+    "txt_9a192725": "Login",
+    "txt_0bb0951d": "Register",
+    "txt_e14ff521": "Reviews & Contact",
+    "txt_46ff2d0e": "Community",
+    "txt_fdd8dba9": "says what",
+    "txt_ff84406f": "about us",
+    "txt_dfec2d5f": "Thousands of readers trust us",
+    "txt_817c0946": "4.9/5 from 3,200+ members",
+    "txt_09c0fd66": "Overview",
+    "txt_b4292de3": "Rating",
+    "txt_74ca205a": "overall",
+    "txt_50f04be1": "3,200+ reviews",
+    "txt_b65e4540": "Feedback",
+    "txt_27118604": "Reader",
+    "txt_7400e913": "✉️ Contact Us",
+    "txt_b8ead6ed": "listening to",
+    "txt_5c0d1a90": "you",
+    "txt_d71ff104": "Sent successfully!",
+    "txt_6b2019cc": "We will reply within 24 working hours.",
+    "txt_cf1c9c7e": "Send more",
+    "txt_f57718cd": "📬 Send Us Feedback",
+    "txt_f5d6a50b": "Topic",
+    "txt_83127882": "Select topic...",
+    "txt_da242a1a": "Technical Support",
+    "txt_f2330a3d": "Feature Request",
+    "txt_d5b31a6c": "Report Bug",
+    "txt_1c731333": "Partnership",
+    "txt_06c1f85a": "Other",
+    "txt_ee7ca513": "Content",
+    "txt_a31400ba": "🚀 Send Feedback",
+    "txt_8f21db8e": "Quick Support",
+    "txt_c1a8b2f2": "Questions",
+    "txt_0ed5eb04": "frequently asked",
+    "txt_66768b62": "No account?",
+    "txt_90d29591": "Register for free and experience the smart digital library today.",
+    "txt_1922c670": "Enter content...",
+    "txt_3f5ddd17": "Documentation",
+    "txt_85500d8f": "Getting started with",
+    "txt_6c5b64f8": "easily",
+    "txt_ca058d3a": "From registering an account to borrowing your first book — we guide you step by step.",
+    "txt_193923c4": "🚀 Quick Start",
+    "txt_2a59ccea": "❓ FAQs",
+    "txt_7f660d23": "📋 Regulations",
+    "txt_9ff81168": "💡 Useful Tips",
+    "txt_e366bb51": "Quick Start",
+    "txt_a03a2c80": "Just",
+    "txt_e553ad5c": "4 steps",
+    "txt_e42eee81": "and you're done",
+    "txt_e67cad73": "Detailed Guide",
+    "txt_db0eacb8": "Everything you need",
+    "txt_bd8a4f03": "to know",
+    "txt_cbb263ca": "Regulations",
+    "txt_c1f002ab": "for library usage",
+    "txt_b718a505": "Tips",
+    "txt_d5e42450": "Use",
+    "txt_4b998510": "more effectively",
+    "txt_85225ad9": "Ready to start?",
+    "txt_5bc906c4": "Sign up for free and get your digital library card today."
+  },
+  "features": {
+    "stat": {
+      "rating": "Rating"
+    },
+    "why": {
+      "diff": "is different",
+      "card_3s": "Card in 3 Seconds",
+      "card_3s_d": "No queuing, no paperwork. Digital library cards are issued automatically right after registration.",
+      "search": "Instant Search",
+      "search_d": "Millisecond full-text search across 12,000+ books. Smart suggestions based on reading history.",
+      "anywhere": "Anywhere, Anytime",
+      "anywhere_d": "Access from phone, tablet, or laptop. Real-time data synchronization.",
+      "security": "Total Security",
+      "security_d": "JWT authentication, dynamic anti-fraud QR codes, multi-layer permission system.",
+      "auto": "Full Automation",
+      "auto_d": "Book return reminders, auto-renewal, new book notifications — no manual action needed.",
+      "report": "Smart Reports",
+      "report_d": "Visual dashboard for admins. Track reading trends, popular books, and active members."
+    },
+    "core": {
+      "goal": "Goal",
+      "goal_d": "Digitize the entire traditional library system, making knowledge more accessible to users everywhere, anytime.",
+      "mission": "Mission",
+      "mission_d": "Become Vietnam's leading digital library platform, connecting millions of readers to a rich knowledge base.",
+      "vision": "Vision",
+      "vision_d": "Build a comprehensive digital learning ecosystem, integrating AI to personalize the reading experience for every reader.",
+      "value": "Values",
+      "value_d": "Transparent, dedicated, continuously innovating, and always putting readers' community interests first."
+    },
+    "cards": {
+      "search": "Quick Search",
+      "search_d": "Find books by title, author, or genre — instant results with Full-text Search.",
+      "borrow": "Borrow Online",
+      "borrow_d": "Request from anywhere, get notified when the book is ready for pickup.",
+      "digital_card": "Auto Digital Card",
+      "digital_card_d": "Issue a personalized QR-coded library card in just 3 seconds.",
+      "notify": "Auto Notifications",
+      "notify_d": "Return reminders, new book alerts via email and SMS.",
+      "report": "Smart Reports",
+      "report_d": "Real-time book and reading trend statistics.",
+      "admin": "Centralized Admin",
+      "admin_d": "Comprehensive dashboard for administrators and librarians.",
+      "jwt": "JWT Security",
+      "jwt_d": "Multi-layer permissions with JWT for data security.",
+      "micro": "Microservices",
+      "micro_d": "Modern architecture with API Gateway and RabbitMQ Event Bus.",
+      "multiplatform": "Multi-platform",
+      "multiplatform_d": "Access anytime on PC, phone, or tablet."
+    },
+    "timeline": {
+      "2020_t": "Project Launch",
+      "2020_d": "SmartLib founded with the goal of digitalizing university libraries nationwide.",
+      "2021_t": "Beta Launch",
+      "2021_d": "Deployed at 5 universities with over 1,000 users.",
+      "2022_t": "National Expansion",
+      "2022_d": "50+ library partners nationwide with 20,000 registered members.",
+      "2023_t": "AI Integration",
+      "2023_d": "Launched smart book recommendations and AI-powered document summaries.",
+      "2024_t": "Digital Transformation Award",
+      "2024_d": "Received Outstanding Digital Transformation Award from the Ministry of Information & Communication.",
+      "2025_t": "Top Platform",
+      "2025_d": "100,000+ members, 500+ library partners, 50,000+ digital titles."
+    },
+    "team": {
+      "building": "building"
+    }
+  },
+  "statistics": {
+    "steps": {
+      "register_t": "Register Account",
+      "register_d": "Fill in personal info, verify email in 1 minute.",
+      "card_t": "Get Digital Card",
+      "card_d": "Your personalized QR-coded library card is issued automatically.",
+      "borrow_t": "Search & Borrow",
+      "borrow_d": "Search for books, click borrow, and choose your pickup date.",
+      "return_t": "Read & Return",
+      "return_d": "Pick up at the counter with your QR code, return on time to avoid fines."
+    },
+    "guide": {
+      "login_t": "System Login",
+      "login_c": "Go to the site and click \"Login\" in the top right. Choose your role and enter your credentials.",
+      "login_tip": "First-time login requires you to change the default password for security.",
+      "search_t": "Search & Borrow Books",
+      "search_c": "Use the search bar to find books by title, author, or category. Click a title to view details and borrow.",
+      "search_tip": "Each member can borrow up to 5 books at a time.",
+      "renew_t": "Renew Books",
+      "renew_c": "Go to \"Borrow History\" in your account to renew before the due date.",
+      "renew_tip": "Each book can be renewed up to 2 times, 7 days each. Must renew at least 1 day before due.",
+      "notify_t": "Manage Notifications",
+      "notify_c": "The system automatically sends reminders via email and SMS. You can customize notification types.",
+      "notify_tip": "Enable book return reminders 3 days in advance to avoid fines.",
+      "history_t": "View History & Statistics",
+      "history_c": "Your personal dashboard shows all borrow/return history, favorites, and smart reading suggestions.",
+      "history_tip": "The AI system analyzes reading history to suggest the most relevant books for you.",
+      "security_t": "Account Security",
+      "security_c": "Protect your account with a strong password and never share your login info.",
+      "security_tip": "Library card QR codes change every 24 hours to prevent fraud."
+    },
+    "rules": {
+      "duration_t": "Borrow Duration",
+      "duration_d": "Default 14 days per loan. Can be renewed up to 2 times.",
+      "quantity_t": "Borrow Limit",
+      "quantity_d": "Maximum 5 books at a time per member.",
+      "fine_t": "Late Fine",
+      "fine_d": "2,000 VND/day/book starting from the due date.",
+      "card_t": "Card Validity",
+      "card_d": "Library card is valid for 1 year from the registration date.",
+      "condition_t": "Book Condition",
+      "condition_d": "Damaged or lost books must be compensated at market price.",
+      "hours_t": "Service Hours",
+      "hours_d": "Mon – Sat: 07:30 – 21:00. Sunday: 08:00 – 17:00."
+    },
+    "tips": {
+      "preborrow_t": "Pre-borrow",
+      "preborrow_d": "Reserve before visiting the library to ensure the book is available.",
+      "wishlist_t": "Save Wishlist",
+      "wishlist_d": "Bookmark books you want to read so you don't miss them when returned.",
+      "mobile_t": "Use Mobile App",
+      "mobile_d": "Access on your phone to manage anywhere, anytime.",
+      "notify_t": "Enable Notifications",
+      "notify_d": "Receive automatic return reminders so you never forget.",
+      "ai_t": "Use AI Suggestions",
+      "ai_d": "The AI system recommends books based on your reading history.",
+      "early_t": "Renew Early",
+      "early_d": "Renew 3 days in advance to avoid losing borrow privileges.",
+      "stats_t": "Track Statistics",
+      "stats_d": "See how many books you've read each month in the dashboard.",
+      "filter_t": "Filter by Category",
+      "filter_d": "Use advanced filters to find exactly the right book in seconds."
+    },
+    "faq": {
+      "q1": "How do I register an account?",
+      "a1": "Click \"Register\" in the top right, fill in your info and verify your email. Your digital library card will be issued automatically within 3 seconds.",
+      "q2": "How many books can I borrow at once?",
+      "a2": "Each member can borrow up to 5 books at a time. The default loan period is 14 days.",
+      "q3": "What is the late return fine?",
+      "a3": "2,000 VND/day/book starting from the due date. You'll receive a reminder 3 days before.",
+      "q4": "What if I forget my password?",
+      "a4": "Click \"Forgot Password\" on the login page, enter your registered email. The system will send a reset link within minutes.",
+      "q5": "How long is the library card valid?",
+      "a5": "The card is valid for 1 year from registration. You can renew it for free up to 30 days before expiry.",
+      "q6": "Can I read digital documents online?",
+      "a6": "Yes! SmartLib has over 5,800 digital documents you can read directly in your browser or download."
+    }
+  },
+  "reviews": {
+    "hero_tag": "Reviews & Contact",
+    "hero_h1": "Community",
+    "hero_h2": "says what",
+    "hero_h3": "about us",
+    "hero_sub": "Thousands of readers trust",
+    "hero_rating": "4.9/5 from 3,200+ members",
+    "section_overview": "Overview",
+    "rating_overall": "Rating",
+    "rating_overall2": "overall",
+    "rating_count": "3,200+ reviews",
+    "section_feedback": "Feedback",
+    "feedback_from": "Reader",
+    "contact_title": "✉️ Contact Us",
+    "contact_we": "listening to",
+    "contact_you": "you",
+    "sent_title": "Sent successfully!",
+    "sent_sub": "We will reply within 24 working hours.",
+    "sent_more": "Send more",
+    "form_title": "📬 Send Us Feedback",
+    "form_topic": "Topic",
+    "form_topic_placeholder": "Select topic...",
+    "form_tech": "Technical Support",
+    "form_feature": "Feature Request",
+    "form_bug": "Report Bug",
+    "form_partner": "Partnership",
+    "form_other": "Other",
+    "form_content": "Content",
+    "form_submit": "🚀 Send Feedback",
+    "quick_support": "Quick Support",
+    "faq_title": "Frequently",
+    "faq_title2": "Asked Questions",
+    "no_account": "No account?",
+    "cta_sub": "Register for free and experience the smart digital library today.",
+    "ui_label": "Interface",
+    "speed_label": "Speed",
+    "feature_label": "Features",
+    "support_label": "Support",
+    "faq1_q": "How to contact urgent support?",
+    "faq1_a": "Call hotline",
+    "faq1_a2": "or email",
+    "faq2_q": "Can I suggest new features?",
+    "faq2_a": "Absolutely! Fill the contact form with topic \"Feature Request\". Our product team will review and respond.",
+    "faq3_q": "How long does email response take?",
+    "faq3_a": "We commit to respond within 24 working hours. Urgent issues are prioritized within 2 hours.",
+    "faq4_q": "Can I visit the office in person?",
+    "faq4_a": "Yes! Office at",
+    "list": [
+      {
+        "name": "Nguyen Anh Tuan",
+        "role": "IT Student",
+        "text": "I just finished registering and immediately received a beautiful virtual library card. Online renewal saves me a lot of time."
+      },
+      {
+        "name": "Tran Thi Mai",
+        "role": "Freelance Reader",
+        "text": "The report dashboard is extremely visual. I can easily view monthly borrowing charts and search for the hottest books."
+      },
+      {
+        "name": "Le Minh Hoang",
+        "role": "PhD Student",
+        "text": "The smart book suggestion feature is extremely useful. It always recommends exactly the topics I care about. Search speed is amazingly fast."
+      },
+      {
+        "name": "Pham Thu Tra",
+        "role": "Teacher",
+        "text": "Since using SmartLib, I no longer have to wait in line. All borrow/return processes via RFID are smooth and fully automated."
+      },
+      {
+        "name": "Dang Quoc Bao",
+        "role": "Economics Student",
+        "text": "Stable system, modern design, and very user-friendly. I can access and borrow digital documents online anywhere without any difficulty."
+      },
+      {
+        "name": "Nguyen Thi Lan",
+        "role": "Freelance Artist",
+        "text": "Rich digital document repository, especially in art and design. Beautiful UI, easy to use. I recommend it to all my friends."
+      }
+    ]
+  }
+}

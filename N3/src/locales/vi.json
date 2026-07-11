@@ -1,0 +1,845 @@
+{
+  "login": {
+    "title": "Đăng nhập",
+    "username": {
+      "label": "Tên đăng nhập / Số điện thoại",
+      "placeholder": "username hoặc 0912 345 678",
+      "required": "Vui lòng nhập tên đăng nhập!"
+    },
+    "password": {
+      "label": "Mật khẩu",
+      "placeholder": "Nhập mật khẩu của bạn",
+      "required": "Vui lòng nhập mật khẩu!"
+    },
+    "forgot": "Quên mật khẩu?",
+    "btn": "Đăng nhập",
+    "no": {
+      "account": "Chưa có tài khoản? "
+    },
+    "register": {
+      "link": "Đăng ký ngay"
+    },
+    "back": {
+      "home": "Quay lại trang chủ"
+    },
+    "contact": "Cần hỗ trợ? Liên hệ ",
+    "success": "Đăng nhập thành công! Chào mừng quay trở lại.",
+    "error": "Đăng nhập thất bại. Sai tài khoản hoặc mật khẩu!"
+  },
+  "register": {
+    "title": "Xin chào!",
+    "subtitle": "Vui lòng tạo tài khoản :)",
+    "name": "Họ và tên",
+    "username": "Tên đăng nhập",
+    "email": "Địa chỉ Email",
+    "password": "Mật khẩu",
+    "confirm": {
+      "password": "Xác nhận mật khẩu"
+    },
+    "phone": "Số điện thoại (Tùy chọn)",
+    "terms": "Tôi đồng ý với ",
+    "and": " và ",
+    "privacy": "Chính sách bảo mật",
+    "btn": "Đăng ký",
+    "have": {
+      "account": "Đã có tài khoản? "
+    },
+    "signin": {
+      "link": "Đăng nhập"
+    },
+    "back": {
+      "home": "Quay lại trang chủ"
+    },
+    "success": {
+      "title": "Đăng Ký Thành Công!",
+      "sub": "Thẻ thư viện số đã tự động được kích hoạt cho tài khoản mới!",
+      "btn": "Vào Trang Đăng Nhập",
+      "msg": "Đăng ký tài khoản thành công!"
+    },
+    "or": "Hoặc",
+    "card": {
+      "code": "MÃ THẺ THƯ VIỆN",
+      "name": "HỌ VÀ TÊN",
+      "expiry": "HẠN SỬ DỤNG"
+    },
+    "google": {
+      "btn": "Đăng ký với Google"
+    },
+    "error": {
+      "default": "Lỗi đăng ký từ hệ thống!",
+      "connection": "Đăng ký thất bại. Vui lòng kiểm tra kết nối API!"
+    }
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "guide": "Hướng dẫn",
+    "contact": "Liên hệ",
+    "login": "Đăng nhập",
+    "register": "Đăng ký"
+  },
+  "hero": {
+    "title": "Online library",
+    "desc": "Thư viện Số Thông Minh thế hệ mới – mở cánh cửa tri thức trong kỷ nguyên số.",
+    "cta": "Cấp thẻ trực tuyến"
+  },
+  "footer": {
+    "copyright": "©2026 — Nhóm 3 · All Rights Reserved"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "books": "Quản lý Sách",
+    "loans": "Quản lý mượn trả",
+    "accounts": "Quản lý Tài khoản",
+    "readers": "Độc giả",
+    "staff": "Thủ thư",
+    "cards": "Thẻ Thư Viện",
+    "finance": "Quản lý Tài chính",
+    "revenue": "Doanh thu",
+    "penalty": "Phí phạt",
+    "logs": "Nhật ký hệ thống",
+    "settings": "Cài đặt hệ thống",
+    "logout": "Logout"
+  },
+  "settings": {
+    "title": "Cài đặt hệ thống",
+    "lang": {
+      "label": "Ngôn ngữ hệ thống",
+      "vi": "Tiếng Việt",
+      "en": "English",
+      "save": "Lưu ngôn ngữ",
+      "saved": "Đã đổi ngôn ngữ thành công!"
+    }
+  },
+  "landing": {
+    "features": {
+      "title": "Hệ Thống Tính Năng Vượt Trội"
+    },
+    "f1": {
+      "num": "01",
+      "title": "Cấp Thẻ Số Tự Động & RFID",
+      "desc": "Hệ thống tích hợp dịch vụ định danh tự động cho phép cấp thẻ thư viện số có mã QR cá nhân hóa chỉ trong 3 giây. Hỗ trợ xác thực OTP, mã QR bảo mật động thay đổi liên tục chống gian lận, và đồng bộ hóa thẻ vật lý RFID của trường học.",
+      "link": "Xem Chi Tiết →"
+    },
+    "f2": {
+      "title": "Tìm Kiếm Thông Minh & Gợi Ý Sách",
+      "desc": "Ứng dụng thuật toán phân tích hành vi đọc để đưa ra gợi ý sách cá nhân hóa chuẩn xác. Tìm kiếm tức thời Full-text Search tốc độ mili-giây, gợi ý dựa trên chủ đề yêu thích và lịch sử mượn trả, quản lý danh mục đa tầng theo thời gian thực."
+    },
+    "f3": {
+      "title": "Mượn Trả Siêu Tốc & API Gateway",
+      "desc": "SmartLib.NET được xây dựng trên nền tảng kiến trúc Microservices mạnh mẽ. Đặt mượn sách trực tuyến, đồng bộ hóa tự động qua RabbitMQ Event Bus, và nhận sách tại quầy qua mã QR siêu tốc. Tất cả được điều hướng qua API Gateway bảo mật."
+    },
+    "how": {
+      "label": "Quy trình",
+      "title": "Chỉ 4 bước đơn giản",
+      "sub": "Bắt đầu sử dụng SmartLib trong vài phút."
+    },
+    "step1": {
+      "t": "Đăng ký",
+      "d": "Tạo tài khoản bằng email hoặc tài khoản trường học"
+    },
+    "step2": {
+      "t": "Tìm kiếm",
+      "d": "Tra cứu sách theo tên, tác giả hoặc thể loại"
+    },
+    "step3": {
+      "t": "Đặt mượn",
+      "d": "Chọn sách và xác nhận yêu cầu mượn online"
+    },
+    "step4": {
+      "t": "Theo dõi",
+      "d": "Nhận thông báo và quản lý lịch mượn trả"
+    },
+    "news": {
+      "label": "Tin tức",
+      "title": "Thông báo & Sự kiện"
+    },
+    "detail": {
+      "link": "Xem Chi Tiết →"
+    },
+    "ft": {
+      "explore": "Khám phá",
+      "services": "Dịch vụ",
+      "newsletter": "Bản tin",
+      "nl": {
+        "label": "Đăng ký nhận thông báo sách mới và sự kiện thư viện hàng tuần.",
+        "placeholder": "Email của bạn...",
+        "btn": "Đăng ký"
+      },
+      "contact": "Liên hệ",
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản dịch vụ",
+      "cookie": "Cookie"
+    },
+    "stats": {
+      "books": "đầu sách",
+      "members": "thành viên",
+      "award": "Giải thưởng chuyển đổi số",
+      "digital_docs": "tài liệu số",
+      "rating": "Đánh giá",
+      "borrows": "lượt mượn",
+      "books_cap": "Đầu sách",
+      "members_cap": "Thành viên",
+      "borrows_cap": "Lượt mượn",
+      "digital_docs_cap": "Tài liệu số"
+    },
+    "card": {
+      "title": "MÃ THẺ THƯ VIỆN",
+      "name": "NGUYỄN VĂN A"
+    },
+    "search_placeholder": "Search",
+    "book1": {
+      "title": "Lập Trình ASP.NET Core MVC",
+      "author": "Nguyễn Văn B (2025)",
+      "status": "Sẵn sàng mượn"
+    },
+    "book2": {
+      "title": "Entity Framework Core 9",
+      "author": "Trần Thị C (2026)",
+      "status": "Đang mượn"
+    }
+  },
+  "btn": {
+    "create": "Tạo",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "view": "Xem",
+    "lock": "Khóa",
+    "unlock": "Mở khóa",
+    "retry": "Thử lại",
+    "back": "Quay lại",
+    "confirm": "Xác nhận",
+    "refresh": "Làm mới",
+    "export": "Xuất Excel",
+    "import": "Nhập Excel"
+  },
+  "profile": {
+    "my": {
+      "account": "Tài khoản của bạn"
+    },
+    "reader": {
+      "detail": "Chi tiết Độc giả"
+    },
+    "title": {
+      "self": "Hồ sơ cá nhân"
+    },
+    "edit": {
+      "btn": "Chỉnh sửa hồ sơ",
+      "title": "Chỉnh sửa hồ sơ"
+    },
+    "phone": "Số điện thoại",
+    "username": "Tên đăng nhập",
+    "library": {
+      "card": "Thẻ thư viện"
+    },
+    "card": {
+      "issued": "NGÀY CẤP",
+      "expiry": "HẾT HẠN"
+    },
+    "no": {
+      "card": "Chưa được cấp thẻ thư viện"
+    },
+    "account": {
+      "status": "Trạng thái tài khoản"
+    },
+    "active": "Đang hoạt động",
+    "locked": "Bị khóa",
+    "created": {
+      "at": "Ngày tạo tài khoản"
+    },
+    "full": {
+      "name": "Họ và tên"
+    },
+    "name": {
+      "placeholder": "Nhập họ tên đầy đủ"
+    },
+    "save": {
+      "changes": "Lưu thay đổi",
+      "success": "Cập nhật hồ sơ thành công!",
+      "error": "Cập nhật thất bại. Vui lòng thử lại!"
+    },
+    "load": {
+      "error": "Không thể tải hồ sơ. Vui lòng thử lại.",
+      "err2": "Đã xảy ra lỗi khi tải hồ sơ!"
+    },
+    "not": {
+      "found": "Không tìm thấy thông tin độc giả này!"
+    }
+  },
+  "dash": {
+    "readers": {
+      "title": "Quản lý Danh sách Độc giả",
+      "sub": "Xem, cập nhật và quản lý thông tin các độc giả đăng ký trong hệ thống",
+      "total": "Độc giả"
+    },
+    "staff": {
+      "title": "Quản lý Thủ thư",
+      "sub": "Xem và quản lý tài khoản thủ thư (Librarian) và quản trị viên trong hệ thống",
+      "total": "nhân viên",
+      "create": "Tạo Thủ thư"
+    },
+    "cards": {
+      "title": "Danh sách Thẻ Thư Viện",
+      "sub": "Xem và quản lý thẻ thư viện của các độc giả",
+      "total": "thẻ"
+    },
+    "logs": {
+      "title": "Nhật ký hệ thống",
+      "sub": "CRUD · Đăng nhập/đăng xuất · Khóa/mở khóa · Sách · Mượn/trả",
+      "empty": "Chưa có bản ghi nhật ký.",
+      "filter": "Lọc loại sự kiện:",
+      "all": "Tất cả",
+      "auth": "Đăng nhập / Đăng xuất",
+      "user": "Người dùng (CRUD, khóa/mở)",
+      "book": "Sách (thêm/sửa/xóa)",
+      "circulation": "Mượn / Trả sách",
+      "total": "bản ghi"
+    },
+    "settings": {
+      "title": "Cài đặt hệ thống"
+    },
+    "search": {
+      "placeholder": "Tìm kiếm Độc giả, Thẻ..."
+    }
+  },
+  "status": {
+    "active": "Hoạt động",
+    "locked": "Bị khóa",
+    "all": "Tất cả trạng thái"
+  },
+  "staff": {
+    "modal": {
+      "title": "Tạo tài khoản Thủ thư"
+    },
+    "full": {
+      "name": "Họ tên"
+    },
+    "phone": "Số điện thoại",
+    "password": "Mật khẩu",
+    "demote": "Hạ Reader"
+  },
+  "dashboard": {
+    "menu": {
+      "admin_system": "HỆ THỐNG ADMIN",
+      "librarian_system": "NGHIỆP VỤ THỦ THƯ",
+      "process_borrow": "Xử lý Mượn / Trả",
+      "finance": "Quản lý Tài chính",
+      "revenue": "Doanh thu",
+      "penalty": "Phí phạt"
+    },
+    "overview": {
+      "total_readers": "Tổng số độc giả",
+      "total_cards": "Tổng số thẻ",
+      "total_borrows": "Tổng lượt mượn",
+      "total_books": "Tổng số lượng sách",
+      "book_borrows": "Lượt mượn sách",
+      "by_month": "Theo tháng",
+      "card_statistics": "Thống kê thẻ",
+      "details": "Chi tiết →",
+      "active_cards_lbl": "Hoạt động:",
+      "locked_cards_lbl": "Bị khóa:",
+      "expired_cards_lbl": "Hết hạn:",
+      "book_categories": "Phân loại đầu sách",
+      "by_category": "Theo thể loại",
+      "top_borrowed_books": "Top sách mượn nhiều",
+      "popularity_ranking": "Xếp hạng phổ biến",
+      "system_logs": "Nhật ký hệ thống",
+      "logs_desc": "Đăng nhập · Khóa/mở · Sách · Mượn/trả — cập nhật gần đây",
+      "refresh": "Làm mới",
+      "view_all": "Xem tất cả →",
+      "no_logs": "Chưa có bản ghi nhật ký.",
+      "no_categories": "Chưa có dữ liệu thể loại",
+      "no_data": "Chưa có dữ liệu"
+    }
+  },
+  "auto": {
+    "txt_543bb199": "Bạn không có quyền truy cập vào bảng quản trị này. Trang web này chỉ dành cho Admin hoặc Thủ thư!",
+    "txt_d66e5b4e": "Quay lại Trang chủ",
+    "txt_013590fd": "Xử lý Mượn / Trả",
+    "txt_4f086c5d": "Phí phạt",
+    "txt_575a6091": "Không tìm thấy kết quả nào",
+    "txt_8f69d55b": "ĐỘC GIẢ",
+    "txt_cd99aa1d": "THẺ THƯ VIỆN",
+    "txt_2268a682": "⚠️ Cảnh báo",
+    "txt_48ac043b": "Bấm vào cảnh báo để mở trang xử lý",
+    "txt_1e892958": "Không có cảnh báo cần xử lý",
+    "txt_4f14c3fa": "Mở trang xử lý →",
+    "txt_59a9e842": "Đã chọn",
+    "txt_2e6f0d86": "Xóa đã chọn",
+    "txt_3651c4d7": "Bỏ chọn",
+    "txt_e293cd50": "Đang tải danh sách độc giả từ Database...",
+    "txt_0e22f7e7": "Không tìm thấy độc giả nào",
+    "txt_58ac4f04": "Vui lòng thử lại với từ khóa hoặc bộ lọc khác.",
+    "txt_92849db7": "Tìm",
+    "txt_682697e7": "Khôi phục",
+    "txt_2fc8766c": "Họ và Tên",
+    "txt_c732ee4e": "Email liên hệ",
+    "txt_6de63f11": "Số điện thoại",
+    "txt_1e405035": "Hủy",
+    "txt_512898d2": "Lưu Thay Đổi",
+    "txt_6c1dfe9d": "Danh sách Thẻ Thư Viện",
+    "txt_f5a875da": "Xem và quản lý thẻ thư viện của các độc giả",
+    "txt_d369e261": "Tổng cộng:",
+    "txt_a6993480": "Trạng thái:",
+    "txt_fd1c3a01": "Tất cả trạng thái",
+    "txt_d2b65230": "Active (Hoạt động)",
+    "txt_d9344990": "Locked (Bị khóa)",
+    "txt_35a6b808": "Expired (Hết hạn)",
+    "txt_934ac7a3": "Đang tải danh sách thẻ...",
+    "txt_49785065": "Không tìm thấy thẻ nào",
+    "txt_d462dda7": "Ngày cấp:",
+    "txt_e67c30d3": "Khóa Thẻ",
+    "txt_f15279aa": "Kích Hoạt",
+    "txt_15e23a99": "Quản lý Thủ thư",
+    "txt_8b7f26f2": "Chỉ Admin được tạo tài khoản Thủ thư (Librarian)",
+    "txt_e7d653f5": "Tạo Thủ thư",
+    "txt_ec89be8d": "Đang tải danh sách nhân viên...",
+    "txt_404c8085": "Chưa có nhân viên nào",
+    "txt_b25937fb": "Đang khởi tạo phiên bảo mật...",
+    "txt_c77a00e8": "Cài đặt hệ thống",
+    "txt_f894048f": "Quản lý thông tin, cấu hình và tùy chỉnh thư viện",
+    "txt_c600a340": "Thông tin thư viện",
+    "txt_8858c435": "Cập nhật tên, địa chỉ và thông tin liên hệ",
+    "txt_82609cef": "Tên thư viện",
+    "txt_7db5b909": "Địa chỉ",
+    "txt_0327b13e": "Giới thiệu ngắn",
+    "txt_2473120f": "Logo thư viện",
+    "txt_acfae9d2": "Tải lên ảnh",
+    "txt_7c2e305f": "Lưu thông tin",
+    "txt_fd51d996": "Tài khoản Admin",
+    "txt_583282b8": "Cập nhật thông tin cá nhân và đổi mật khẩu",
+    "txt_623825de": "Họ và tên",
+    "txt_c76ba836": "Ảnh đại diện",
+    "txt_fcac0c11": "Thay đổi ảnh",
+    "txt_ff6fe7b1": "Đổi mật khẩu",
+    "txt_d9487313": "Mật khẩu hiện tại",
+    "txt_ccef959a": "Mật khẩu mới",
+    "txt_d393faae": "Xác nhận lại",
+    "txt_03c9183a": "Cài đặt thẻ thư viện",
+    "txt_f91ceb28": "Quy định thời hạn và giới hạn mượn sách",
+    "txt_c23dd68f": "Thời hạn thẻ mặc định",
+    "txt_d3c3f22b": "1 năm",
+    "txt_c8b30bdd": "2 năm",
+    "txt_364c8183": "3 năm",
+    "txt_99744649": "5 năm",
+    "txt_582846d5": "Số sách được mượn tối đa",
+    "txt_59a5d82c": "Số ngày mượn tối đa",
+    "txt_999302b3": "Lưu cài đặt",
+    "txt_b1dec2e8": "Cài đặt tiền phạt",
+    "txt_dcd6f911": "Mức phạt trả trễ, mất sách và làm hỏng sách",
+    "txt_a4d1f838": "Phạt trả trễ (VNĐ/ngày)",
+    "txt_19e22d13": "Phạt mất sách (VNĐ)",
+    "txt_c40ed254": "Phạt làm hỏng sách (VNĐ)",
+    "txt_8c6f9073": "Cài đặt thông báo",
+    "txt_9243437d": "Email nhắc nhở và thông báo hệ thống",
+    "txt_50368d86": "Email nhắc trả sách",
+    "txt_9eba830e": "Gửi email nhắc nhở trước khi hết hạn",
+    "txt_9057a108": "Thông báo hệ thống",
+    "txt_2f6315c0": "Hiển thị cảnh báo nội bộ trên Dashboard",
+    "txt_fd5ba7c4": "Nhắc trước khi đến hạn (ngày)",
+    "txt_a764e4b3": "Sao lưu dữ liệu",
+    "txt_36f619f7": "Tạo và khôi phục bản sao lưu hệ thống",
+    "txt_e7a0d600": "Tạo bản sao lưu thủ công",
+    "txt_183fb6d3": "Xuất toàn bộ dữ liệu hệ thống ra file backup",
+    "txt_cfe3f9bf": "Tạo backup",
+    "txt_6b858fe0": "Khôi phục từ file backup",
+    "txt_b083ce20": "Tải lên file .json hoặc .zip để khôi phục dữ liệu",
+    "txt_782f13ac": "Khôi phục dữ liệu sẽ ghi đè toàn bộ dữ liệu hiện tại. Hãy chắc chắn trước khi thực hiện.",
+    "txt_2196afbb": "Xử lý Yêu cầu Mượn / Trả",
+    "txt_d8ee31f7": "Mã Phiếu",
+    "txt_d3bc2c9c": "Độc Giả",
+    "txt_dbce656a": "Mã Thẻ",
+    "txt_f01dcd24": "Sách Đăng Ký",
+    "txt_e1f22674": "Ngày Đăng Ký",
+    "txt_42b670cd": "Trạng Thái",
+    "txt_9822be11": "Hành Động",
+    "txt_a4db4d12": "Duyệt",
+    "txt_2119d87d": "Từ chối",
+    "txt_10fb2c48": "Đã xử lý",
+    "txt_772271c9": "Tra cứu Tình trạng Độc giả",
+    "txt_8929ef31": "Tìm kiếm",
+    "txt_93faf48c": "Thẻ Hoạt Động",
+    "txt_2d017d38": "Sách đang mượn",
+    "txt_8d6a5a83": "Sách quá hạn",
+    "txt_ece15c59": "Tiền phạt tích lũy",
+    "txt_3fa0943c": "Các cuốn sách đang mượn:",
+    "txt_fba104f9": "Hạn trả:",
+    "txt_f923e7c4": "Xác nhận Trả sách",
+    "txt_cc0b1c24": "Nhập mã sách",
+    "txt_208f42e3": "Kiểm tra vật lý",
+    "txt_d9c855e8": "Hoàn tất",
+    "txt_142e98dc": "Nhập mã sách để bắt đầu quy trình thu hồi:",
+    "txt_555f1f22": "Tiếp tục",
+    "txt_2266320e": "Xác nhận tình trạng sách trả lại:",
+    "txt_f958fb22": "Sách còn nguyên vẹn, không rách nát",
+    "txt_1c810fc4": "Sách sạch sẽ, không bị vẽ bậy",
+    "txt_890cdb9d": "Sách trả đúng hạn",
+    "txt_12b318ea": "Xác nhận Hoàn trả",
+    "txt_f400e4ad": "Thu hồi sách thành công!",
+    "txt_127b35a4": "Đầu sách đã được tự động cộng lại kho lưu trữ Catalog (N1).",
+    "txt_e29866e5": "Thu hồi cuốn khác",
+    "txt_8c4d542c": "Đang tải dữ liệu từ Database...",
+    "txt_706b4d81": "Chưa có độc giả nào trong hệ thống.",
+    "txt_bb345e8e": "Họ Tên",
+    "txt_8cae9afb": "Chưa có thẻ thư viện nào trong hệ thống.",
+    "txt_b721fd50": "Chủ thẻ",
+    "txt_c72178e9": "Ngày cấp",
+    "txt_a584d378": "Ngày hết hạn",
+    "txt_e78f2e1e": "Danh sách giao dịch mượn/trả đang trống.",
+    "txt_b208cc4c": "Tên Sách",
+    "txt_e7f5ae9e": "Phạt (VND)",
+    "txt_660d6b7b": "Chờ kết nối Catalog Service (N1)",
+    "txt_4704b606": "Dữ liệu chi tiết danh mục sách sẽ được đồng bộ tự động khi nhóm N1 hoàn thành và kết nối API Gateway.",
+    "txt_1663500a": "Sửa Thông tin Độc giả",
+    "txt_72a24184": "Nhập họ tên đầy đủ",
+    "txt_9b3c16d5": "Nhập email",
+    "txt_0f1d3d42": "Nhập số điện thoại (tuỳ chọn)",
+    "txt_fe030e24": "Tìm theo mã thẻ, tên chủ thẻ...",
+    "txt_b1a6cf3b": "Circulation Service N2 - Xử lý mượn trả",
+    "txt_14a2633f": "Quản lý Doanh thu - N2 Librarian Payments",
+    "txt_05b21c78": "Quản lý Phí phạt - N2 Librarian Fines",
+    "txt_9a1b7969": "Mô tả ngắn về thư viện...",
+    "txt_f200d91f": "Họ và tên Admin",
+    "txt_22bfd9b8": "Nhập mật khẩu hiện tại",
+    "txt_eee7a769": "Nhập lại mật khẩu",
+    "txt_1437f79c": "Về chúng tôi",
+    "txt_3b318cbe": "Câu chuyện",
+    "txt_0e5b1034": "Xây dựng bởi những người yêu sách, vì một cộng đồng học tập không giới hạn.",
+    "txt_25751bcd": "Chúng tôi tin rằng tri thức là quyền của tất cả mọi người.",
+    "txt_9045a161": "Khám phá thêm",
+    "txt_cc73abff": "Giá trị cốt lõi",
+    "txt_5c458e9e": "Chúng tôi",
+    "txt_48411906": "tin vào điều gì",
+    "txt_e2df5844": "Tại sao chọn chúng tôi",
+    "txt_2e148974": "như thế nào?",
+    "txt_c4be013b": "Tính năng",
+    "txt_2e542d2c": "Mọi thứ trong",
+    "txt_e1438e83": "một nền tảng",
+    "txt_ab967c92": "Hành trình",
+    "txt_3061f544": "Lịch sử",
+    "txt_5c886e25": "phát triển",
+    "txt_e189c453": "Đội ngũ",
+    "txt_8ddd22da": "Những người",
+    "txt_f9a9a4af": "xây dựng",
+    "txt_1bc7300d": "Công nghệ",
+    "txt_f9e30f99": "Được xây dựng bằng",
+    "txt_be5aa24e": "công nghệ hiện đại",
+    "txt_5607de2d": "Sẵn sàng trải nghiệm?",
+    "txt_c84f1db8": "Đăng ký tài khoản và nhận thẻ thư viện trực tuyến ngay hôm nay.",
+    "txt_8b6b7866": "🚀 Đăng ký ngay",
+    "txt_ad3ff017": "Đăng nhập →",
+    "txt_9013c13c": "Tra cứu sách",
+    "txt_6ec698b2": "Mượn trực tuyến",
+    "txt_ab124f2b": "Đặt trước",
+    "txt_bdf85ddb": "Gia hạn sách",
+    "txt_7557a4be": "Tài liệu số",
+    "txt_3833739b": "Nhập email đăng ký của bạn để nhận mã xác thực đặt lại mật khẩu thật gửi về hòm thư.",
+    "txt_769e52d9": "Gửi Mã Xác Thực",
+    "txt_98809dfd": "Một mã xác thực đã được gửi tới",
+    "txt_d47944cc": ". Vui lòng nhập mã và mật khẩu mới.",
+    "txt_691e5b59": "Cập Nhật Mật Khẩu",
+    "txt_c23a8def": "Nhớ ra mật khẩu?",
+    "txt_32b703d0": "Đăng Nhập Ngay",
+    "txt_3cc53a09": "Quay lại trang chủ",
+    "txt_1b001c91": "Mã Xác Thực (Token)",
+    "txt_f3786db5": "Dán mã xác thực tại đây",
+    "txt_4129871f": "Mật Khẩu Mới",
+    "txt_159f5728": "Tối thiểu 6 ký tự",
+    "txt_46d5b92d": "Nhập Lại Mật Khẩu",
+    "txt_45a0ffe8": "Sự kiện",
+    "txt_80cb24f5": "Tuần lễ Sách & Văn hóa Đọc 2025",
+    "txt_2ddd25ec": "Sách mới",
+    "txt_fa0565c8": "Thông báo",
+    "txt_8ab3e5f5": "Gia hạn thẻ miễn phí học kỳ hè 2025",
+    "txt_03f0c664": "Trang chủ",
+    "txt_33f0741f": "Giới thiệu",
+    "txt_3b5d38f4": "Hướng dẫn",
+    "txt_9276b119": "Liên hệ",
+    "txt_9a192725": "Đăng nhập",
+    "txt_0bb0951d": "Đăng ký",
+    "txt_e14ff521": "Đánh giá & Liên hệ",
+    "txt_46ff2d0e": "Cộng đồng",
+    "txt_fdd8dba9": "nói gì",
+    "txt_ff84406f": "về chúng tôi",
+    "txt_dfec2d5f": "Hàng nghìn độc giả tin tưởng",
+    "txt_817c0946": "4.9/5 từ 3,200+ thành viên",
+    "txt_09c0fd66": "Tổng quan",
+    "txt_b4292de3": "Đánh giá",
+    "txt_74ca205a": "tổng thể",
+    "txt_50f04be1": "3,200+ đánh giá",
+    "txt_b65e4540": "Phản hồi",
+    "txt_27118604": "Độc giả",
+    "txt_7400e913": "✉️ Liên hệ với chúng tôi",
+    "txt_b8ead6ed": "lắng nghe",
+    "txt_5c0d1a90": "bạn",
+    "txt_d71ff104": "Gửi thành công!",
+    "txt_6b2019cc": "Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.",
+    "txt_cf1c9c7e": "Gửi thêm",
+    "txt_f57718cd": "📬 Gửi phản hồi cho chúng tôi",
+    "txt_f5d6a50b": "Chủ đề",
+    "txt_83127882": "Chọn chủ đề...",
+    "txt_da242a1a": "Hỗ trợ kỹ thuật",
+    "txt_f2330a3d": "Góp ý tính năng",
+    "txt_d5b31a6c": "Báo lỗi",
+    "txt_1c731333": "Hợp tác",
+    "txt_06c1f85a": "Khác",
+    "txt_ee7ca513": "Nội dung",
+    "txt_a31400ba": "🚀 Gửi phản hồi",
+    "txt_8f21db8e": "Hỗ trợ nhanh",
+    "txt_c1a8b2f2": "Câu hỏi",
+    "txt_0ed5eb04": "thường gặp",
+    "txt_66768b62": "Chưa có tài khoản?",
+    "txt_90d29591": "Đăng ký miễn phí và trải nghiệm thư viện số thông minh ngay hôm nay.",
+    "txt_1922c670": "Nhập nội dung...",
+    "txt_3f5ddd17": "Tài liệu hướng dẫn",
+    "txt_85500d8f": "Bắt đầu với",
+    "txt_6c5b64f8": "dễ dàng",
+    "txt_ca058d3a": "Từ đăng ký tài khoản đến mượn sách đầu tiên — chúng tôi hướng dẫn bạn từng bước một.",
+    "txt_193923c4": "🚀 Bắt đầu nhanh",
+    "txt_2a59ccea": "❓ Câu hỏi thường gặp",
+    "txt_7f660d23": "📋 Quy định",
+    "txt_9ff81168": "💡 Mẹo hay",
+    "txt_e366bb51": "Bắt đầu nhanh",
+    "txt_a03a2c80": "Chỉ",
+    "txt_e553ad5c": "4 bước",
+    "txt_e42eee81": "là xong",
+    "txt_e67cad73": "Hướng dẫn chi tiết",
+    "txt_db0eacb8": "Mọi thứ bạn cần",
+    "txt_bd8a4f03": "biết",
+    "txt_cbb263ca": "Quy định",
+    "txt_c1f002ab": "sử dụng thư viện",
+    "txt_b718a505": "Mẹo hay",
+    "txt_d5e42450": "Dùng",
+    "txt_4b998510": "hiệu quả hơn",
+    "txt_85225ad9": "Sẵn sàng bắt đầu?",
+    "txt_5bc906c4": "Đăng ký miễn phí và nhận thẻ thư viện số ngay hôm nay."
+  },
+  "features": {
+    "stat": {
+      "rating": "Đánh giá"
+    },
+    "why": {
+      "diff": "khác biệt",
+      "card_3s": "Cấp thẻ trong 3 giây",
+      "card_3s_d": "Không cần xếp hàng, không cần giấy tờ. Thẻ thư viện số được cấp tự động ngay sau khi đăng ký.",
+      "search": "Tìm kiếm tức thì",
+      "search_d": "Full-text search tốc độ mili-giây trên 12,000+ đầu sách. Gợi ý thông minh theo lịch sử đọc.",
+      "anywhere": "Mọi lúc mọi nơi",
+      "anywhere_d": "Truy cập từ điện thoại, máy tính bảng hay laptop. Đồng bộ dữ liệu thời gian thực.",
+      "security": "Bảo mật tuyệt đối",
+      "security_d": "JWT authentication, mã QR động chống gian lận, phân quyền nhiều lớp bảo vệ dữ liệu.",
+      "auto": "Tự động hóa hoàn toàn",
+      "auto_d": "Nhắc nhở trả sách, gia hạn tự động, thông báo sách mới — tất cả không cần thao tác thủ công.",
+      "report": "Báo cáo thông minh",
+      "report_d": "Dashboard trực quan cho quản trị viên. Thống kê xu hướng đọc, sách hot, thành viên tích cực."
+    },
+    "core": {
+      "goal": "Mục tiêu",
+      "goal_d": "Số hóa toàn bộ hệ thống thư viện truyền thống, giúp người dùng tiếp cận tri thức dễ dàng hơn mọi lúc mọi nơi.",
+      "mission": "Sứ mệnh",
+      "mission_d": "Trở thành nền tảng thư viện số hàng đầu Việt Nam, kết nối hàng triệu độc giả với kho tàng tri thức phong phú.",
+      "vision": "Tầm nhìn",
+      "vision_d": "Xây dựng hệ sinh thái học tập số toàn diện, tích hợp AI để cá nhân hóa trải nghiệm đọc cho từng độc giả.",
+      "value": "Giá trị",
+      "value_d": "Minh bạch, tận tâm, liên tục đổi mới và luôn đặt lợi ích cộng đồng người đọc lên hàng đầu."
+    },
+    "cards": {
+      "search": "Tra cứu nhanh",
+      "search_d": "Tìm sách theo tên, tác giả, thể loại — kết quả tức thì với Full-text Search.",
+      "borrow": "Mượn trực tuyến",
+      "borrow_d": "Đặt mượn từ xa, nhận thông báo khi sách sẵn sàng lấy tại quầy.",
+      "digital_card": "Thẻ số tự động",
+      "digital_card_d": "Cấp thẻ thư viện số có mã QR cá nhân hóa chỉ trong 3 giây.",
+      "notify": "Thông báo tự động",
+      "notify_d": "Nhắc nhở trả sách, thông báo sách mới qua email và SMS.",
+      "report": "Báo cáo thông minh",
+      "report_d": "Thống kê đầu sách và xu hướng đọc theo thời gian thực.",
+      "admin": "Quản trị tập trung",
+      "admin_d": "Dashboard toàn diện cho quản trị viên và thủ thư.",
+      "jwt": "Bảo mật JWT",
+      "jwt_d": "Phân quyền nhiều lớp với JWT, đảm bảo an toàn dữ liệu.",
+      "micro": "Microservices",
+      "micro_d": "Kiến trúc hiện đại với API Gateway, RabbitMQ Event Bus.",
+      "multiplatform": "Đa nền tảng",
+      "multiplatform_d": "Truy cập mọi lúc mọi nơi trên máy tính, điện thoại, máy tính bảng."
+    },
+    "timeline": {
+      "2020_t": "Khởi động dự án",
+      "2020_d": "SmartLib được thành lập với mục tiêu số hóa thư viện đại học toàn quốc.",
+      "2021_t": "Ra mắt phiên bản beta",
+      "2021_d": "Triển khai tại 5 trường đại học đầu tiên với hơn 1,000 người dùng.",
+      "2022_t": "Mở rộng toàn quốc",
+      "2022_d": "50+ thư viện đối tác trên cả nước với 20,000 thành viên đăng ký.",
+      "2023_t": "Tích hợp AI",
+      "2023_d": "Ra mắt tính năng gợi ý sách thông minh và tóm tắt tài liệu bằng AI.",
+      "2024_t": "Giải thưởng chuyển đổi số",
+      "2024_d": "Nhận giải thưởng Chuyển đổi số xuất sắc từ Bộ Thông tin & Truyền thông.",
+      "2025_t": "Nền tảng hàng đầu",
+      "2025_d": "100,000+ thành viên, 500+ thư viện đối tác, 50,000+ đầu sách số."
+    },
+    "team": {
+      "building": "xây dựng"
+    }
+  },
+  "statistics": {
+    "steps": {
+      "register_t": "Đăng ký tài khoản",
+      "register_d": "Điền thông tin cá nhân, xác thực email trong 1 phút.",
+      "card_t": "Nhận thẻ số",
+      "card_d": "Thẻ thư viện số với mã QR cá nhân được cấp tự động.",
+      "borrow_t": "Tìm & đặt mượn",
+      "borrow_d": "Tìm kiếm sách, nhấn đặt mượn và chọn ngày lấy.",
+      "return_t": "Đọc & trả sách",
+      "return_d": "Lấy sách tại quầy bằng mã QR, trả đúng hạn để tránh phí phạt."
+    },
+    "guide": {
+      "login_t": "Đăng nhập hệ thống",
+      "login_c": "Truy cập và nhấn nút \"Đăng nhập\" ở góc trên phải. Chọn vai trò phù hợp rồi nhập thông tin đăng nhập.",
+      "login_tip": "Lần đầu đăng nhập hệ thống sẽ yêu cầu đổi mật khẩu mặc định để bảo mật.",
+      "search_t": "Tìm kiếm và mượn sách",
+      "search_c": "Sử dụng thanh tìm kiếm để tìm sách theo tên, tác giả hoặc thể loại. Nhấn vào tên sách để xem chi tiết và đặt mượn.",
+      "search_tip": "Mỗi thành viên được mượn tối đa 5 cuốn cùng lúc.",
+      "renew_t": "Gia hạn sách",
+      "renew_c": "Vào mục \"Lịch sử mượn\" trong tài khoản để gia hạn sách trước khi hết hạn.",
+      "renew_tip": "Mỗi sách được gia hạn tối đa 2 lần, mỗi lần 7 ngày. Cần gia hạn trước 1 ngày.",
+      "notify_t": "Quản lý thông báo",
+      "notify_c": "Hệ thống tự động gửi thông báo nhắc nhở qua email và SMS. Bạn có thể tùy chỉnh loại thông báo muốn nhận.",
+      "notify_tip": "Bật thông báo nhắc trả sách 3 ngày trước để tránh phí phạt.",
+      "history_t": "Xem lịch sử và thống kê",
+      "history_c": "Dashboard cá nhân hiển thị toàn bộ lịch sử mượn trả, sách yêu thích và gợi ý đọc thông minh.",
+      "history_tip": "Hệ thống AI phân tích lịch sử đọc để gợi ý sách phù hợp nhất với bạn.",
+      "security_t": "Bảo mật tài khoản",
+      "security_c": "Bảo vệ tài khoản bằng mật khẩu mạnh và không chia sẻ thông tin đăng nhập với người khác.",
+      "security_tip": "Mã QR thẻ thư viện thay đổi mỗi 24 giờ để chống gian lận."
+    },
+    "rules": {
+      "duration_t": "Thời hạn mượn",
+      "duration_d": "Mặc định 14 ngày/lần mượn. Có thể gia hạn tối đa 2 lần.",
+      "quantity_t": "Số lượng mượn",
+      "quantity_d": "Tối đa 5 cuốn sách cùng một lúc cho mỗi thành viên.",
+      "fine_t": "Phí phạt trễ hạn",
+      "fine_d": "2,000đ/ngày/cuốn sách trả trễ. Tính từ ngày hết hạn.",
+      "card_t": "Hiệu lực thẻ",
+      "card_d": "Thẻ thư viện có hiệu lực 1 năm kể từ ngày đăng ký.",
+      "condition_t": "Tình trạng sách",
+      "condition_d": "Sách hư hỏng hoặc mất phải bồi thường theo giá thị trường.",
+      "hours_t": "Giờ phục vụ",
+      "hours_d": "Thứ 2 – Thứ 7: 07:30 – 21:00. Chủ nhật: 08:00 – 17:00."
+    },
+    "tips": {
+      "preborrow_t": "Đặt mượn trước",
+      "preborrow_d": "Đặt trước khi đến thư viện để chắc chắn sách còn sẵn.",
+      "wishlist_t": "Lưu danh sách yêu thích",
+      "wishlist_d": "Bookmark sách muốn đọc để không bỏ lỡ khi sách được trả về.",
+      "mobile_t": "Dùng app mobile",
+      "mobile_d": "Truy cập trên điện thoại để quản lý mọi lúc mọi nơi.",
+      "notify_t": "Bật thông báo",
+      "notify_d": "Nhận nhắc nhở trả sách tự động, không lo quên hạn.",
+      "ai_t": "Dùng gợi ý AI",
+      "ai_d": "Hệ thống AI gợi ý sách dựa trên lịch sử đọc của bạn.",
+      "early_t": "Gia hạn sớm",
+      "early_d": "Gia hạn trước 3 ngày để tránh bị khóa quyền mượn.",
+      "stats_t": "Theo dõi thống kê",
+      "stats_d": "Xem bạn đã đọc bao nhiêu sách mỗi tháng trong dashboard.",
+      "filter_t": "Lọc theo thể loại",
+      "filter_d": "Dùng bộ lọc nâng cao để tìm đúng sách cần trong vài giây."
+    },
+    "faq": {
+      "q1": "Làm thế nào để đăng ký tài khoản?",
+      "a1": "Nhấn \"Đăng ký\" ở góc trên phải, điền thông tin cá nhân và xác thực email. Thẻ thư viện số sẽ được cấp tự động trong vòng 3 giây.",
+      "q2": "Tôi có thể mượn bao nhiêu sách cùng lúc?",
+      "a2": "Mỗi thành viên được mượn tối đa 5 cuốn sách cùng một lúc. Thời hạn mượn mặc định là 14 ngày.",
+      "q3": "Phí phạt trả sách trễ là bao nhiêu?",
+      "a3": "2,000đ/ngày/cuốn sách tính từ ngày hết hạn. Bạn sẽ nhận thông báo nhắc nhở trước 3 ngày.",
+      "q4": "Tôi quên mật khẩu thì phải làm gì?",
+      "a4": "Nhấn \"Quên mật khẩu\" ở trang đăng nhập, nhập email đăng ký. Hệ thống sẽ gửi link đặt lại mật khẩu trong vài phút.",
+      "q5": "Thẻ thư viện có hiệu lực bao lâu?",
+      "a5": "Thẻ có hiệu lực 1 năm kể từ ngày đăng ký. Bạn có thể gia hạn thẻ miễn phí trước khi hết hạn 30 ngày.",
+      "q6": "Tôi có thể đọc tài liệu số trực tuyến không?",
+      "a6": "Có! SmartLib có hơn 5,800 tài liệu số có thể đọc trực tiếp trên trình duyệt hoặc tải về thiết bị."
+    }
+  },
+  "reviews": {
+    "hero_tag": "Đánh giá & Liên hệ",
+    "hero_h1": "Cộng đồng",
+    "hero_h2": "nói gì",
+    "hero_h3": "về chúng tôi",
+    "hero_sub": "Hàng nghìn độc giả tin tưởng",
+    "hero_rating": "4.9/5 từ 3,200+ thành viên",
+    "section_overview": "Tổng quan",
+    "rating_overall": "Đánh giá",
+    "rating_overall2": "tổng thể",
+    "rating_count": "3,200+ đánh giá",
+    "section_feedback": "Phản hồi",
+    "feedback_from": "Độc giả",
+    "contact_title": "✉️ Liên hệ với chúng tôi",
+    "contact_we": "lắng nghe",
+    "contact_you": "bạn",
+    "sent_title": "Gửi thành công!",
+    "sent_sub": "Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.",
+    "sent_more": "Gửi thêm",
+    "form_title": "📬 Gửi phản hồi cho chúng tôi",
+    "form_topic": "Chủ đề",
+    "form_topic_placeholder": "Chọn chủ đề...",
+    "form_tech": "Hỗ trợ kỹ thuật",
+    "form_feature": "Góp ý tính năng",
+    "form_bug": "Báo lỗi",
+    "form_partner": "Hợp tác",
+    "form_other": "Khác",
+    "form_content": "Nội dung",
+    "form_submit": "🚀 Gửi phản hồi",
+    "quick_support": "Hỗ trợ nhanh",
+    "faq_title": "Câu hỏi",
+    "faq_title2": "thường gặp",
+    "no_account": "Chưa có tài khoản?",
+    "cta_sub": "Đăng ký miễn phí và trải nghiệm thư viện số thông minh ngay hôm nay.",
+    "ui_label": "Giao diện",
+    "speed_label": "Tốc độ",
+    "feature_label": "Tính năng",
+    "support_label": "Hỗ trợ",
+    "faq1_q": "Làm thế nào để liên hệ hỗ trợ khẩn cấp?",
+    "faq1_a": "Gọi hotline",
+    "faq1_a2": "hoặc email",
+    "faq2_q": "Tôi có thể góp ý tính năng mới không?",
+    "faq2_a": "Hoàn toàn có thể! Điền form liên hệ với chủ đề \"Góp ý tính năng\". Đội ngũ sản phẩm sẽ xem xét và phản hồi.",
+    "faq3_q": "Thời gian phản hồi email là bao lâu?",
+    "faq3_a": "Chúng tôi cam kết phản hồi trong vòng 24 giờ làm việc. Các vấn đề khẩn cấp được ưu tiên xử lý trong 2 giờ.",
+    "faq4_q": "Có thể đến trực tiếp văn phòng không?",
+    "faq4_a": "Có! Văn phòng tại",
+    "list": [
+      {
+        "name": "Nguyễn Anh Tuấn",
+        "role": "Sinh viên CNTT",
+        "text": "Tôi vừa hoàn thành đăng ký và ngay lập tức nhận được thẻ thư viện ảo cực kỳ đẹp. Việc gia hạn trực tuyến giúp tôi tiết kiệm rất nhiều thời gian."
+      },
+      {
+        "name": "Trần Thị Mai",
+        "role": "Độc giả tự do",
+        "text": "Dashboard báo cáo hiển thị cực kỳ trực quan. Tôi có thể dễ dàng xem biểu đồ mượn sách hàng tháng và tìm kiếm những đầu sách hot nhất."
+      },
+      {
+        "name": "Lê Minh Hoàng",
+        "role": "Nghiên cứu sinh",
+        "text": "Tính năng gợi ý sách thông minh cực kỳ hữu ích. Nó luôn đề xuất đúng những chủ đề tôi đang quan tâm. Tốc độ tìm kiếm nhanh đến đáng kinh ngạc."
+      },
+      {
+        "name": "Phạm Thu Trà",
+        "role": "Giáo viên",
+        "text": "Từ khi dùng SmartLib, tôi không còn phải xếp hàng chờ đợi nữa. Mọi quy trình mượn trả qua thẻ RFID vô cùng trơn tru và hoàn toàn tự động."
+      },
+      {
+        "name": "Đặng Quốc Bảo",
+        "role": "Sinh viên Kinh tế",
+        "text": "Hệ thống ổn định, thiết kế hiện đại và rất thân thiện. Tôi có thể truy cập mượn tài liệu số trực tuyến bất kỳ đâu mà không gặp khó khăn gì."
+      },
+      {
+        "name": "Nguyễn Thị Lan",
+        "role": "Họa sĩ tự do",
+        "text": "Kho tài liệu số phong phú, đặc biệt là mảng nghệ thuật và thiết kế. Giao diện đẹp, dễ dùng. Tôi giới thiệu cho tất cả bạn bè của mình."
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+version: '3.8'
+
+# N3 stack: Identity + API Gateway (+ SQL)
+# Catalog (N1) và Circulation (N2) deploy riêng trên cùng Docker network.
+# Catalog mặc định expose host port 5185 — nếu lỗi "port already allocated":
+#   bash scripts/fix-port-5185.sh
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: library_shared_sql_server
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SuperStrongPassword@123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - shared_db_data:/var/opt/mssql
+    restart: unless-stopped
+    networks:
+      - library_net
+
+  identity-service:
+    build:
+      context: ./IdentityReportService
+      dockerfile: Dockerfile
+    container_name: library_identity_service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=sql-server;Database=Identity;User Id=sa;Password=SuperStrongPassword@123!;TrustServerCertificate=True;
+      - JwtSettings__Secret=eY3zS9VfK8pB9a4sTc2X9ZkL7rN0yGq7
+      - ApiGateway__Url=http://api-gateway:8080
+      - fido2__serverDomain=163.223.210.87
+      - fido2__origins__0=http://163.223.210.87
+    ports:
+      - "5001:80"
+    depends_on:
+      - sql-server
+    restart: unless-stopped
+    networks:
+      - library_net
+
+  api-gateway:
+    build:
+      context: ./ApiGateway
+      dockerfile: Dockerfile
+    container_name: library_api_gateway
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - JwtSettings__Secret=eY3zS9VfK8pB9a4sTc2X9ZkL7rN0yGq7
+    ports:
+      - "5000:8080"
+    depends_on:
+      - identity-service
+    restart: unless-stopped
+    networks:
+      - library_net
+    # Ocelot route tới catalog-service:5185 và circulation-service:5002 (container N1/N2)
+
+  # N1 Catalog — image do team N1 build/push. Chỉ chạy khi deploy catalog trên VPS này.
+  catalog-service:
+    image: ngoc10032005/n1-catalog-service:latest
+    container_name: library_catalog_service
+    ports:
+      - "5185:5185"
+    restart: unless-stopped
+    networks:
+      - library_net
+
+  frontend:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    container_name: library_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api-gateway
+    restart: unless-stopped
+    networks:
+      - library_net
+
+networks:
+  library_net:
+    driver: bridge
+
+volumes:
+  shared_db_data:

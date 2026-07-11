@@ -1,0 +1,58 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog-service",
+          "Port": 5185
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalog/{everything}",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post",
+        "Put",
+        "Delete"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/circulation/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "library_circulation_service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/circulation/{everything}",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post",
+        "Put",
+        "Delete"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/{everything}",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post",
+        "Put",
+        "Delete"
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://163.223.210.87:5000"
+  }
+}

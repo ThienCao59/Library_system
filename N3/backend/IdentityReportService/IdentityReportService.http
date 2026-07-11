@@ -1,0 +1,75 @@
+@HostAddress = http://localhost:5208
+
+### 1. Check API Health
+GET {{HostAddress}}/health
+Accept: application/json
+
+### 2. Register a User (Default: Reader)
+# @name register
+POST {{HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "tester",
+  "email": "tester@example.com",
+  "password": "Password123!",
+  "fullName": "Software Tester"
+}
+
+### 3. Login to Get Token
+# @name login
+POST {{HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "tester",
+  "password": "Password123!"
+}
+
+### --- Capture Token for subsequent requests ---
+@authToken = {{login.response.body.accessToken}}
+@refreshToken = {{login.response.body.refreshToken}}
+
+### 4. Get User Profile (Requires Login)
+GET {{HostAddress}}/api/user/profile
+Authorization: Bearer {{authToken}}
+Accept: application/json
+
+### 5. Update User Profile (Requires Login)
+PUT {{HostAddress}}/api/user/profile
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+  "email": "tester_updated@example.com",
+  "fullName": "Software Tester (Updated)"
+}
+
+### 6. Refresh Access Token
+POST {{HostAddress}}/api/auth/refresh
+Content-Type: application/json
+
+{
+  "accessToken": "{{authToken}}",
+  "refreshToken": "{{refreshToken}}"
+}
+
+### 7. Get Dashboard Reports (Requires Admin or Librarian role)
+# Note: By default, registered users are "Reader". 
+# You will get 403 Forbidden until you update the user's role to 'Admin' in the database!
+GET {{HostAddress}}/api/report/dashboard
+Authorization: Bearer {{authToken}}
+Accept: application/json
+
+### 8. Update Library Card Status (Requires Admin or Librarian role)
+# Note: Replace LIB-XXXXXX with the actual card number returned in Registration response.
+# This will also get 403 Forbidden until the user's role is updated to 'Admin' or 'Librarian' in the database.
+PUT {{HostAddress}}/api/user/cards/LIB-123456/status
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+  "status": "Active",
+  "extendMonths": 6
+}
+
